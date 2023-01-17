@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<launch>
+  <!-- send urdf to param server -->
+  <param name="robot_description" command="$(find xacro)/xacro --inorder '$(find sirius_driver)/urdf/sirius.xacro'" />
+
+  <!-- load controller-->
+  <rosparam ns="/locomotion" command="load" file="$(find sirius_driver)/config/driver_control.yaml" />
+
+  <!-- motor node -->
+  <node ns="/locomotion" name="locomotion_driver" pkg="canopen_motor_node" type="canopen_motor_node" output="screen" clear_params="true">
+    <rosparam command="load" file="$(find sirius_driver)/config/can0.yaml" />
+    <rosparam command="load" file="$(find sirius_driver)/config/drive.yaml" />
+  </node>
+
+  <node ns="/locomotion" name="controller_spawner" pkg="controller_manager" type="spawner" output="screen" args="joint_state_controller sirius_velocity_controller_left_1"/>
+
+  <node pkg="rosservice" type="rosservice" name="init" args="call --wait /locomotion/driver/init"/>
+
+  <!--<node pkg="sirius_ackerman" type="sirius_ackerman" name="sirius_ackerman_node" output="screen">
+  </node>-->
+
+</launch>

@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/max/catkin_ws/src/sirius/sirius_driver/cmake-build-debug/devel/setup.sh

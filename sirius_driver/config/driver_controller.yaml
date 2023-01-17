@@ -1,0 +1,17 @@
+## joint_names
+##joint_names: [sirius_motor_left_1_joint, sirius_motor_right_1_joint, sirius_motor_left_2_joint, sirius_motor_right_2_joint, sirius_motor_left_3_joint, sirius_motor_right_3_joint]
+
+## control_mode_adapter
+#max_command_silence: 0.5
+
+## joint_state_controller
+sirius_joint_publisher:
+    type: joint_state_controller/JointStateController
+    publish_rate: 50
+
+
+## velocity controller
+sirius_velocity_controller_left_1:
+  type: velocity_controllers/JointVelocityController
+  joint: orthos_wheel_left_1_joint
+  required_drive_mode: 3

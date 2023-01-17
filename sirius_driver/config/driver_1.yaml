@@ -1,0 +1,246 @@
+bus:
+  device: can0
+sync:
+  interval_ms: 30  # 50Hz
+  overflow: 0
+
+name: locomotion
+defaults:
+  eds_pkg: sirius_driver
+  eds_file: "/config/CL3-E-2-0F.eds" # the parser reads EDS and DCF
+  dcf_overlay:
+    "1400sub2" : "0x01"             # RPDO 0 auf sync
+    "1401sub2" : "0x01"             # RPDO 1 auf sync
+    "1402sub2" : "0x01"             # RPDO 2 auf sync
+    "1800sub2" : "0x01"             # TPDO 0 auf sync
+    "1801sub2" : "0x01"             # TPDO 1 auf sync
+    "1802sub2" : "0x01"             # TPDO 2 auf sync
+
+
+
+# optional, all defaults can be overwritten per node
+  # canopen_chain_node settings ..
+  motor_allocator: canopen::Motor402::Allocator # select allocator for motor layer
+  motor_layer: #settings passed to motor layer (plugin-specific)
+    switching_state: 3 # (Operation_Enable), state for mode switching
+  pos_to_device: "rint(rad2deg(pos)*1000)" # rad -> mdeg
+  pos_from_device: "deg2rad(obj6064)/1000" # actual position [mdeg] -> rad
+  vel_to_device: "rint(rad2deg(vel)*1000)" # rad/s -> mdeg/s
+  vel_from_device: "deg2rad(obj606C)/1000" # actual velocity [mdeg/s] -> rad/s
+  eff_to_device: "rint(eff)" # just round to integer
+  eff_from_device: "0" # unset
+
+
+nodes:
+  orthos_wheel_left_1_joint:   # Driving motors- 
+    id: 1 
+    eds_file: "/config/CL3-E-2-0F.eds"
+    dcf_overlay:
+      "6091sub1": "0x78"                  # Motor shaft revolutions (120)
+      "6091sub2": "0x01"                  # Driving Shaft revolutions (1)
+      "60A9": "00B44700"              # Velocity in RPM
+      "607E": "0x00" # Polarity (left oder right)
+      "2031" : "10000"                # Max. Current 10A
+      "203Bsub1" : "3470"             # Nominal current
+      "203Bsub2" : "1000"             # Eine Sekunde max. bei 10A
+      "6080" : "0xFA0"                # max Motor speed: 4000 rpm
+      "6060" : "0x03"                 # Profile velocity mode
+      "606D" : "2"                    # Velocity Window (max. Abweichung um 6041 auf 1 gesetzt wird (Zielgesch. erreicht))
+      "6083" : "471"                  # Gewünschte Beschleunigung in U/min/s
+      "6084" : "471"                  # Gewünschte Abbremsung in U/min/s
+      "6086" : "3"                    # Ruckbegrenzte Rampe
+      "60A4sub1" : "943"              # Gewünschte Jerk
+      "60A4sub2" : "943"              # Gewünschter Jerk
+      "60A4sub3" : "943"              # Gewünschter Jerk
+      "60A4sub4" : "943"              # Gewünschter Jerk
+      
+  orthos_wheel_left_3_joint:
+    id: 2
+    eds_file: "/config/CL3-E-2-0F.eds"
+    dcf_overlay:
+      "6091sub1": "0x78"                  # Motor shaft revolutions (120)
+      "6091sub2": "0x01"                  # Driving Shaft revolutions (1) 
+      "60A9": "00B44700"              # Velocity in RPM
+      "607E": "0x00" # Polarity (left oder right)
+      "2031" : "10000"                # Max. Current 10A
+      "203Bsub1" : "3470"             # Nominal current
+      "203Bsub2" : "1000"             # Eine Sekunde max. bei 10A
+      "6080" : "0xFA0"                # max Motor speed: 4000 rpm
+      "6060" : "0x03"                 # Profile velocity mode
+      "606D" : "2"                    # Velocity Window (max. Abweichung um 6041 auf 1 gesetzt wird (Zielgesch. erreicht))
+      "6083" : "471"                  # Gewünschte Beschleunigung in U/min/s
+      "6084" : "471"                  # Gewünschte Abbremsung in U/min/s
+      "6086" : "3"                    # Ruckbegrenzte Rampe
+      "60A4sub1" : "943"              # Gewünschte Jerk
+      "60A4sub2" : "943"              # Gewünschter Jerk
+      "60A4sub3" : "943"              # Gewünschter Jerk
+      "60A4sub4" : "943"              # Gewünschter Jerk
+      
+  orthos_wheel_right_1_joint:
+    id: 3
+    eds_file: "/config/CL3-E-2-0F.eds"
+    dcf_overlay:
+      "6091sub1": "0x78"                  # Motor shaft revolutions (120)
+      "6091sub2": "0x01"                  # Driving Shaft revolutions (1)
+      "60A9": "00B44700"              # Velocity in RPM
+      "607E": "0x40" # Polarity (left oder right)
+      "2031" : "10000"                # Max. Current 10A
+      "203Bsub1" : "3470"             # Nominal current
+      "203Bsub2" : "1000"             # Eine Sekunde max. bei 10A
+      "6080" : "0xFA0"                # max Motor speed: 4000 rpm
+      "6060" : "0x03"                 # Profile velocity mode
+      "606D" : "2"                    # Velocity Window (max. Abweichung um 6041 auf 1 gesetzt wird (Zielgesch. erreicht))
+      "6083" : "471"                  # Gewünschte Beschleunigung in U/min/s
+      "6084" : "471"                  # Gewünschte Abbremsung in U/min/s
+      "6086" : "3"                    # Ruckbegrenzte Rampe
+      "60A4sub1" : "943"              # Gewünschte Jerk
+      "60A4sub2" : "943"              # Gewünschter Jerk
+      "60A4sub3" : "943"              # Gewünschter Jerk
+      "60A4sub4" : "943"              # Gewünschter Jerk
+      
+  orthos_wheel_right_3_joint:
+    id: 4 
+    eds_file: "/config/CL3-E-2-0F.eds"
+    dcf_overlay:
+      "6091sub1": "0x78"                  # Motor shaft revolutions (120)
+      "6091sub2": "0x01"                  # Driving Shaft revolutions (1)
+      "60A9": "00B44700"              # Velocity in RPM
+      "607E": "0x40" # Polarity (left oder right)
+      "2031" : "10000"                # Max. Current 10A
+      "203Bsub1" : "3470"             # Nominal current
+      "203Bsub2" : "1000"             # Eine Sekunde max. bei 10A
+      "6080" : "0xFA0"                # max Motor speed: 4000 rpm
+      "6060" : "0x03"                 # Profile velocity mode
+      "606D" : "2"                    # Velocity Window (max. Abweichung um 6041 auf 1 gesetzt wird (Zielgesch. erreicht))
+      "6083" : "471"                  # Gewünschte Beschleunigung in U/min/s
+      "6084" : "471"                  # Gewünschte Abbremsung in U/min/s
+      "6086" : "3"                    # Ruckbegrenzte Rampe
+      "60A4sub1" : "943"              # Gewünschte Jerk
+      "60A4sub2" : "943"              # Gewünschter Jerk
+      "60A4sub3" : "943"              # Gewünschter Jerk
+      "60A4sub4" : "943"              # Gewünschter Jerk
+      
+      
+  orthos_motor_left_1_joint:        #Steering Motors
+    id: 5
+    eds_file: "/config/CL3-E-2-0F.eds"
+    dcf_overlay:
+      "6091sub1" : "0x00000038"       # Getriebeübersetzung Motordrehungen ehemals 1A
+      "6091sub1" : "0x00000001"       # Getriebeübersetzung Schaftdrehungen
+      "6091sub2" : "0x00000038"       # Getriebeübersetzung Motordrehungen
+      "6091sub2" : "0x00000001"       # Getriebeübersetzung Schaftdrehungen 
+      "60A9": "00B44700"              # Velocity in RPM
+      "607E": "0x40" # Polarity (left oder right)
+      "2031" : "10000"                # Max. Current 10A
+      "203Bsub1" : "3470"             # Nominal current
+      "203Bsub2" : "1000"             # Eine Sekunde max. bei 10A
+      "607Dsub1" : "-18000"                    # Min. Software Position Limit in own units
+      "607Dsub2" : "18000"                    # Max. Software Position Limit in own units
+#      "607C" : ""                     # Home Offset (tbd)
+      "6080" : "0xFA0"                # max Motor speed: 4000 rpm
+      "6060" : "0x01"                 # Profile Position mode
+      "6081" : "18000"                     # Profile Velocity (max Speed to position)
+      "6082" : "18000"                     # End velocity (Velocity at position)
+      "6083" : "471"                  # Gewünschte Beschleunigung in U/min/s
+      "6084" : "471"                  # Gewünschte Abbremsung in U/min/s
+      "6086" : "3"                    # Ruckbegrenzte Rampe
+      "60A4sub1" : "943"              # Gewünschte Jerk
+      "60A4sub2" : "943"              # Gewünschter Jerk
+      "60A4sub3" : "943"              # Gewünschter Jerk
+      "60A4sub4" : "943"              # Gewünschter Jerk
+      "60A8" : "0xFF410000"           # Position in Zehntelgrad      
+      #"60A9" : "0xFF410300"           # Geschwindigkeit in Zehntelgrad pro Sekunde
+#      #"60F2" :                      # Positioning Option Code
+      
+  orthos_motor_left_3_joint:
+    id: 6
+    eds_file: "/config/CL3-E-2-0F.eds"
+    dcf_overlay:
+      "6091sub1" : "0x00000038"       # Getriebeübersetzung Motordrehungen ehemals 1A
+      "6091sub1" : "0x00000001"       # Getriebeübersetzung Schaftdrehungen
+      "6091sub2" : "0x00000038"       # Getriebeübersetzung Motordrehungen
+      "6091sub2" : "0x00000001"       # Getriebeübersetzung Schaftdrehungen 
+      "60A9": "00B44700"              # Velocity in RPM
+      "607E": "0x40" # Polarity (left oder right)
+      "2031" : "10000"                # Max. Current 10A
+      "203Bsub1" : "3470"             # Nominal current
+      "203Bsub2" : "1000"             # Eine Sekunde max. bei 10A
+      "607Dsub1" : "-18000"                    # Min. Software Position Limit in own units
+      "607Dsub2" : "18000"                    # Max. Software Position Limit in own units
+#     "607C" : ""                     # Home Offset (tbd)
+      "6080" : "0xFA0"                # max Motor speed: 4000 rpm
+      "6060" : "0x01"                 # Profile Position mode
+      "6081" : "18000"                     # Profile Velocity (max Speed to position)
+      "6082" : "18000"                     # End velocity (Velocity at position)
+      "6083" : "471"                  # Gewünschte Beschleunigung in U/min/s
+      "6084" : "471"                  # Gewünschte Abbremsung in U/min/s
+      "6086" : "3"                    # Ruckbegrenzte Rampe
+      "60A4sub1" : "943"              # Gewünschte Jerk
+      "60A4sub2" : "943"              # Gewünschter Jerk
+      "60A4sub3" : "943"              # Gewünschter Jerk
+      "60A4sub4" : "943"              # Gewünschter Jerk
+      "60A8" : "0xFF410000"           # Position in Zehntelgrad      
+      "60A9" : "0xFF410300"           # Geschwindigkeit in Zehntelgrad pro Sekunde
+#      "60F2" :                      # Positioning Option Code
+      
+  orthos_motor_right_1_joint:
+    id: 7
+    eds_file: "/config/CL3-E-2-0F.eds"
+    dcf_overlay:
+      "6091sub1" : "0x00000038"       # Getriebeübersetzung Motordrehungen ehemals 1A
+      "6091sub1" : "0x00000001"       # Getriebeübersetzung Schaftdrehungen
+      "6091sub2" : "0x00000038"       # Getriebeübersetzung Motordrehungen
+      "6091sub2" : "0x00000001"       # Getriebeübersetzung Schaftdrehungen 
+      "60A9": "00B44700"              # Velocity in RPM
+      "607E": "0x40" # Polarity (left oder right)
+      "2031" : "10000"                # Max. Current 10A
+      "203Bsub1" : "3470"             # Nominal current
+      "203Bsub2" : "1000"             # Eine Sekunde max. bei 10A
+      "607Dsub1" : "-18000"                    # Min. Software Position Limit in own units
+      "607Dsub2" : "18000"                    # Max. Software Position Limit in own units
+#     "607C" : ""                     # Home Offset (tbd)
+      "6080" : "0xFA0"                # max Motor speed: 4000 rpm
+      "6060" : "0x01"                 # Profile Position mode
+      "6081" : "18000"                     # Profile Velocity (max Speed to position)
+      "6082" : "18000"                     # End velocity (Velocity at position)
+      "6083" : "471"                  # Gewünschte Beschleunigung in U/min/s
+      "6084" : "471"                  # Gewünschte Abbremsung in U/min/s
+      "6086" : "3"                    # Ruckbegrenzte Rampe
+      "60A4sub1" : "943"              # Gewünschte Jerk
+      "60A4sub2" : "943"              # Gewünschter Jerk
+      "60A4sub3" : "943"              # Gewünschter Jerk
+      "60A4sub4" : "943"              # Gewünschter Jerk
+      "60A8" : "0xFF410000"           # Position in Zehntelgrad      
+      "60A9" : "0xFF410300"           # Geschwindigkeit in Zehntelgrad pro Sekunde
+#      #"60F2" :                      # Positioning Option Code
+      
+  orthos_motor_right_3_joint:
+    id: 8
+    eds_file: "/config/CL3-E-2-0F.eds"
+    dcf_overlay:
+      "6091sub1" : "0x00000038"       # Getriebeübersetzung Motordrehungen ehemals 1A
+      "6091sub1" : "0x00000001"       # Getriebeübersetzung Schaftdrehungen
+      "6091sub2" : "0x00000038"       # Getriebeübersetzung Motordrehungen
+      "6091sub2" : "0x00000001"       # Getriebeübersetzung Schaftdrehungen 
+      "60A9": "00B44700"              # Velocity in RPM
+      "607E": "0x40" # Polarity (left oder right)
+      "2031" : "10000"                # Max. Current 10A
+      "203Bsub1" : "3470"             # Nominal current
+      "203Bsub2" : "1000"             # Eine Sekunde max. bei 10A
+      "607Dsub1" : "-18000"                    # Min. Software Position Limit in own units
+      "607Dsub2" : "18000"                    # Max. Software Position Limit in own units
+#      # "607C" : ""                     # Home Offset (tbd)
+      "6080" : "0xFA0"                # max Motor speed: 4000 rpm
+      "6060" : "0x01"                 # Profile Position mode
+      "6081" : "18000"                     # Profile Velocity (max Speed to position)
+      "6082" : "18000"                     # End velocity (Velocity at position)
+      "6083" : "471"                  # Gewünschte Beschleunigung in U/min/s
+      "6084" : "471"                  # Gewünschte Abbremsung in U/min/s
+      "6086" : "3"                    # Ruckbegrenzte Rampe
+      "60A4sub1" : "943"              # Gewünschte Jerk
+      "60A4sub2" : "943"              # Gewünschter Jerk
+      "60A4sub3" : "943"              # Gewünschter Jerk
+      "60A4sub4" : "943"              # Gewünschter Jerk
+      "60A8" : "0xFF410000"           # Position in Zehntelgrad      
+      "60A9" : "0xFF410300"           # Geschwindigkeit in Zehntelgrad pro Sekunde
+#      "60F2" :                      # Positioning Option Code

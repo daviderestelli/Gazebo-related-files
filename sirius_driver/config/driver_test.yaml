@@ -1,0 +1,14 @@
+name: locomotion
+defaults:
+  eds_pkg: sirius_driver
+  eds_file: "/config/CL3-E-2-0F.eds" # the parser reads EDS and DCF
+
+
+# optional, all defaults can be overwritten per node
+  # canopen_chain_node settings ..
+  motor_allocator: canopen::Motor402::Allocator # select allocator for motor layer
+
+nodes:
+  orthos_wheel_left_1_joint:   # Driving motors- 
+    id: 1 
+
