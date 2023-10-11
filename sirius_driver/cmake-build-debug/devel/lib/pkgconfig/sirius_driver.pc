@@ -1,8 +1,0 @@
-prefix=/home/max/catkin_ws/src/sirius/sirius_driver/cmake-build-debug/devel
-
-Name: sirius_driver
-Description: Description of sirius_driver
-Version: 0.0.0
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 

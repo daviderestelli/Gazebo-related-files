@@ -17,10 +17,14 @@ Furthermore, the ROS2 Foxy has been leveraged for communication of the motors wi
 
 ## Wiring
 The figure below depicts how to wire the Jetson to the driving motor via a generic CAN bus, however, this can also be replaced with an existing PCB. For connections from the Nanotec controller to the [CL3-E Manual](https://en.nanotec.com/fileadmin/files/Handbuecher/Motorsteuerungen/CL3-E/fir-v2213/CL3E_CANopen_USB_ModbusRTU_Technical-Manual_V3.4.0.pdf?1662975689).
-![[BLDC.png]]
+
+![BDLC](./figures/BLDC.png)
+
 The wiring for the stepper driver (steering motor) to the Jetson is depicted below.
-![[Figures/Stepper.png]]
-![[Figures/Stepper_Driver.png]]
+
+![Stepper](/figures/Stepper.png)
+![Stepper Driver](/figures/Stepper_Driver.png)
+
 ## Operation
 After connecting all the equipment, simply run the following commands in Terminal 1:
 ```bash

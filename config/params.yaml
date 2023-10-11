@@ -1,0 +1,24 @@
+# Driving Motors
+motor1:
+   ros__parameters:
+      can: 'can0'
+      id: 1
+motor2:
+   ros__parameters:
+      can: 'can0'
+      id: 2
+motor3:
+   ros__parameters:
+      can: 'can0'
+      id: 3
+motor4:
+   ros__parameters:
+      can: 'can0'
+      id: 4
+
+# Steering Motors
+steer:
+   ros__parameters:
+      step: 11
+      dir1: 16
+      dir2: 32
