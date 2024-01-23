@@ -7,6 +7,9 @@ from launch.substitutions import Command, FindExecutable, PathJoinSubstitution, 
 from launch_ros.actions import Node
 from launch_ros.substitutions import FindPackageShare
 
+from ament_index_python.packages import get_package_share_directory
+import os
+import xacro
 
 def generate_launch_description():
     # Declare arguments
@@ -31,29 +34,36 @@ def generate_launch_description():
     use_mock_hardware = LaunchConfiguration("use_mock_hardware")
 
     # Get URDF via xacro
-    robot_description_content = Command(
-        [
-            PathJoinSubstitution([FindExecutable(name="xacro")]),
-            " ",
-            PathJoinSubstitution(
-                [FindPackageShare("ros2_control_demo_example_2"), "urdf", "diffbot.urdf.xacro"]
-            ),
-            " ",
-            "use_mock_hardware:=",
-            use_mock_hardware,
-        ]
-    )
-    robot_description = {"robot_description": robot_description_content}
+    # robot_description_content = Command(
+    #     [
+    #         PathJoinSubstitution([FindExecutable(name="xacro")]),
+    #         " ",
+    #         PathJoinSubstitution(
+    #             [FindPackageShare("rogue"), "description/urdf", "rogue_des.urdf"]
+    #         ),
+    #         " ",
+    #         "use_mock_hardware:=",
+    #         use_mock_hardware,
+    #     ]
+    # )
+    # robot_description = {"robot_description": robot_description_content}
+
+    use_sim_time = LaunchConfiguration('use_sim_time')
+    pkg_path = os.path.join(get_package_share_directory('rogue'))
+    urdf_file = os.path.join(pkg_path, 'description/urdf', 'rogue_des.urdf')
+    robot_description_config = xacro.process_file(urdf_file)
+
+    robot_description = {'robot_description': robot_description_config.toxml()}
 
     robot_controllers = PathJoinSubstitution(
         [
-            FindPackageShare("ros2_control_demo_example_2"),
-            "config",
-            "diffbot_controllers.yaml",
+            FindPackageShare("rogue"),
+            "bringup/config",
+            "rogue_controllers.yaml",
         ]
     )
     rviz_config_file = PathJoinSubstitution(
-        [FindPackageShare("ros2_control_demo_description"), "diffbot/rviz", "diffbot.rviz"]
+        [FindPackageShare("rogue"), "rogue/description/rviz", "rogue_config.rviz"]
     )
 
     control_node = Node(
