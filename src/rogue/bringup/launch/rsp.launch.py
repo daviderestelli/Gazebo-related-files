@@ -23,7 +23,8 @@ def generate_launch_description():
     pkg_path = os.path.join(get_package_share_directory('rogue'))
     rviz_path = os.path.join(pkg_path, 'description/rviz/rogue_config.rviz')
     urdf_file = os.path.join(pkg_path, 'description/urdf', 'rogue_des.urdf')
-    robot_description_config = xacro.process_file(urdf_file)
+    xacro_file = os.path.join(pkg_path, 'description/urdf', 'rogue_des.xacro')
+    robot_description_config = xacro.process_file(xacro_file)
 
     # Create a robot_state_publisher node
     params = {'robot_description': robot_description_config.toxml(), 'use_sim_time': use_sim_time}
