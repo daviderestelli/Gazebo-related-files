@@ -4,17 +4,47 @@ from ament_index_python.packages import get_package_share_directory
 
 from launch import LaunchDescription
 from launch.substitutions import LaunchConfiguration
-from launch.actions import DeclareLaunchArgument
+from launch.actions import DeclareLaunchArgument, RegisterEventHandler
 from launch_ros.actions import Node
 
 import xacro
 
+
+from launch.substitutions import Command, FindExecutable, PathJoinSubstitution, LaunchConfiguration
+from launch_ros.substitutions import FindPackageShare
+from launch.event_handlers import OnProcessExit
+
+import pdb
+
 # rviz2 -d /home/michi/Downloads/rogue/src/rogue/description/rviz/rogue_config.rviz
 # ros2 run joint_state_publisher_gui joint_state_publisher_gui
+# ros2 run teleop_twist_keyboard teleop_twist_keyboard --ros-args -r /cmd_vel:=/rogue/cmd_vel_unstamped
 # gz sim src/rogue/rogue.sdf
 
 def generate_launch_description():
-    print(xacro.__file__)
+    declared_arguments = []
+    declared_arguments.append(
+        DeclareLaunchArgument(
+            "gui",
+            default_value="true",
+            description="Start RViz2 automatically with this launch file.",
+        )
+    )
+    declared_arguments.append(
+        DeclareLaunchArgument(
+            "use_mock_hardware",
+            default_value="false",
+            description="Start robot with mock hardware mirroring command to its states.",
+        )
+    )
+    declared_arguments.append(
+        DeclareLaunchArgument(
+            'use_sim_time',
+            default_value='false',
+            description='Use sim time if true'
+        )
+    )
+
     # Check if we're told to use sim time
     use_sim_time = LaunchConfiguration('use_sim_time')
     # Declare arguments
@@ -24,7 +54,28 @@ def generate_launch_description():
     rviz_path = os.path.join(pkg_path, 'description/rviz/rogue_config.rviz')
     urdf_file = os.path.join(pkg_path, 'description/urdf', 'rogue_des.urdf')
     xacro_file = os.path.join(pkg_path, 'description/urdf', 'rogue_des.xacro')
+    xacro_file = os.path.join(pkg_path, 'description/urdf', 'rogue.urdf.xacro')
     robot_description_config = xacro.process_file(xacro_file)
+
+    use_mock_hardware = LaunchConfiguration("use_mock_hardware")
+    robot_description_content = Command(
+        [
+            PathJoinSubstitution([FindExecutable(name="xacro")]),
+            " ",
+            PathJoinSubstitution(
+                [FindPackageShare("rogue"), "description","urdf", "rogue.urdf.xacro"]
+            ),
+            " ",
+            "use_mock_hardware:=",
+            use_mock_hardware,
+        ]
+    )
+    
+    robot_description = {"robot_description": robot_description_content}
+    #print(robot_description)
+    #pdb.set_trace()
+
+
 
     # Create a robot_state_publisher node
     params = {'robot_description': robot_description_config.toxml(), 'use_sim_time': use_sim_time}
@@ -32,13 +83,16 @@ def generate_launch_description():
         package='robot_state_publisher',
         executable='robot_state_publisher',
         output='screen',
-        parameters=[params]
+        parameters=[robot_description],
+        remappings=[
+            ("/rogue/cmd_vel_unstamped", "/cmd_vel"),
+        ],
     )
     node_joint_state_publisher = Node(
         package='joint_state_publisher',
         executable='joint_state_publisher',
         output='screen',
-        parameters=[params]
+        parameters=[robot_description]
     )
     rviz_node = Node(
         package='rviz2',
@@ -48,14 +102,54 @@ def generate_launch_description():
         arguments=['-d', rviz_path],
     )
 
-    # Launch!
-    return LaunchDescription([
-        DeclareLaunchArgument(
-            'use_sim_time',
-            default_value='false',
-            description='Use sim time if true'),
+    # NEW INPUTS
+    robot_controllers = PathJoinSubstitution(
+        [
+            FindPackageShare("rogue"),
+            "bringup/config",
+            "rogue_controllers.yaml",
+        ]
+    )
+    control_node = Node(
+        package="controller_manager",
+        executable="ros2_control_node",
+        parameters=[robot_description, robot_controllers],
+        output="both",
+    )
+    joint_state_broadcaster_spawner = Node(
+        package="controller_manager",
+        executable="spawner",
+        arguments=["joint_state_broadcaster", "--controller-manager", "/controller_manager"],
+    )
+    robot_controller_spawner = Node(
+        package="controller_manager",
+        executable="spawner",
+        arguments=["ackermann_base_controller", "--controller-manager", "/controller_manager"],
+    )
+    delay_rviz_after_joint_state_broadcaster_spawner = RegisterEventHandler(
+        event_handler=OnProcessExit(
+            target_action=joint_state_broadcaster_spawner,
+            on_exit=[rviz_node],
+        )
+    )
+
+    # Delay start of robot_controller after `joint_state_broadcaster`
+    delay_robot_controller_spawner_after_joint_state_broadcaster_spawner = RegisterEventHandler(
+        event_handler=OnProcessExit(
+            target_action=joint_state_broadcaster_spawner,
+            on_exit=[robot_controller_spawner],
+        )
+    )
+
+
+    nodes = [
+        control_node,
         node_robot_state_publisher,
         node_joint_state_publisher,
-        rviz_node
-    ])
+        rviz_node,
+        delay_rviz_after_joint_state_broadcaster_spawner,
+        delay_robot_controller_spawner_after_joint_state_broadcaster_spawner
+    ]
 
+    # Launch!
+    return LaunchDescription(declared_arguments + nodes)

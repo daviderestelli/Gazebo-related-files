@@ -10,7 +10,11 @@ controller_manager:
 
 ackermann_base_controller:
   ros__parameters:
-    left_wheel_names: ["left_wheel_joint"]
-    right_wheel_names: ["right_wheel_joint"]
+    left_steer_names: ["Steering_Front_Left"]
+    left_front_wheel_names: ["Driving_Front_Left"]
+    right_steer_names: ["Steering_Front_Right"]
+    right_front_wheel_names: ["Driving_Front_Right"]
+    left_wheel_names: ["Driving_Left"]
+    right_wheel_names: ["Driving_Right"]
 
     
