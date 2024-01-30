@@ -1,39 +1,32 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
 <robot
   name="rogue">
-  <!-- base link -->
-  <link name="base_link">
-   <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
-  </link>
-  <!-- joint base chassis -->
-    <joint name="base_joint" type="fixed">
-      <parent link="base_link"/>
-      <child link="chassis_link"/>
-      <origin xyz="0 0 0"/>
-  </joint>
-    <!-- chassis link -->
   <link
-    name="chassis_link">
+    name="base_link">
     <inertial>
       <origin
-        xyz="-0.00246940894159626 0.1058972543147 5.46494556407368E-17"
+        xyz="0.103810599409774 -2.7109617373637E-09 -0.0838472970584355"
         rpy="0 0 0" />
       <mass
-        value="136.620754096564" />
+        value="7.01937426124387" />
       <inertia
-        ixx="3.3220316255083"
-        ixy="1.43783842796417E-19"
-        ixz="8.74036870867536E-05"
-        iyy="20.3007194974988"
-        iyz="3.4410713482206E-19"
-        izz="18.0177890671193" />
+        ixx="0.0741303779895859"
+        ixy="1.44345389077846E-06"
+        ixz="-0.00011285057172583"
+        iyy="0.119368535310317"
+        iyz="-1.75393886531914E-08"
+        izz="0.147490279923879" />
     </inertial>
     <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://rogue/description/meshes/base_link.stl" />
+          filename="package://rogue/meshes/base_link.STL" />
       </geometry>
       <material
         name="">
@@ -47,41 +40,25 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://rogue/description/meshes/base_link.stl" />
+          filename="package://rogue/meshes/base_link.STL" />
       </geometry>
     </collision>
   </link>
-  <!-- joint chassis ST front_left -->
-  <joint name="Steering_Front_Left" type="continuous">
-    <parent link="chassis_link"/>
-    <child link="Steering_Front_Left_Link"/>
-    <origin
-      xyz="0.5625 0.306 0"
-      rpy="1.5708 0 1.568" />
-    <axis
-      xyz="0 1 0" />
-    <limit
-      lower="-3.14"
-      upper="3.14"
-      effort="0"
-      velocity="4.05" />
-  </joint>
-  <!-- link ST front left -->
   <link
     name="Steering_Front_Left_Link">
     <inertial>
       <origin
-        xyz="0.0265509625988199 -0.0902801904129602 0.00150839438422112"
+        xyz="-0.244746564283713 0.0614701607897898 -0.000901258948528993"
         rpy="0 0 0" />
       <mass
-        value="0.291764052989946" />
+        value="1.85682341940371" />
       <inertia
-        ixx="0.000897400695611327"
-        ixy="-0.000181864873221569"
-        ixz="-4.0471931325247E-05"
-        iyy="0.000964137142000603"
-        iyz="-1.0331977698871E-05"
-        izz="0.00160749385918111" />
+        ixx="0.0307102115747056"
+        ixy="0.00225357611286934"
+        ixz="1.56417982949755E-14"
+        iyy="0.0217734903548105"
+        iyz="-1.09539655991642E-15"
+        izz="0.0500272192704002" />
     </inertial>
     <visual>
       <origin
@@ -89,11 +66,12 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://rogue/description/meshes/Steering_Front_Left_Link.stl" />
+          filename="package://rogue/meshes/Steering_Front_Left_Link.STL" />
       </geometry>
       <material
         name="">
-        <color rgba="0.44313725490196076 0.6235294117647059 0.5686274509803921 1.0" />
+        <color
+          rgba="0.666666666666667 0.698039215686274 0.768627450980392 1" />
       </material>
     </visual>
     <collision>
@@ -102,41 +80,38 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://rogue/description/meshes/Steering_Front_Left_Link.stl" />
+          filename="package://rogue/meshes/Steering_Front_Left_Link.STL" />
       </geometry>
     </collision>
   </link>
-  <!-- joint ST front left DR front_left -->
-  <joint name="Driving_Front_Left" type="continuous">
-    <parent link="Steering_Front_Left_Link"/>
-    <child link="Driving_Front_Left_Link"/>
+  <joint
+    name="Steering_Front_Left"
+    type="continuous">
     <origin
-      xyz="0 -0.1145 0"
-      rpy="1.1343 -0.031639 0.054039" />
+      xyz="-0.539929731609329 -0.542999999999972 -0.193804668520646"
+      rpy="-1.5789896816345 0 -1.5707963267949" />
+    <parent
+      link="base_link" />
+    <child
+      link="Steering_Front_Left_Link" />
     <axis
-      xyz="0.99823 0 0.059504" />
-    <limit
-      lower="-100"
-      upper="100"
-      effort="0"
-      velocity="4.05" />
+      xyz="0 1 0" />
   </joint>
-  <!-- link DR front_left -->
   <link
     name="Driving_Front_Left_Link">
     <inertial>
       <origin
-        xyz="-0.0182564505721252 -3.92727932868597E-06 -0.00112517178645061"
+        xyz="0.235635564712825 -0.0257443062896671 0.0757766920462269"
         rpy="0 0 0" />
       <mass
-        value="1.39036444547767" />
+        value="3.92591214810011" />
       <inertia
-        ixx="0.00504431627608896"
-        ixy="6.66802588932824E-07"
-        ixz="3.18555927896634E-05"
-        iyy="0.00451167026228943"
-        iyz="-2.22813617032334E-07"
-        izz="0.00451213600378384" />
+        ixx="0.0405276513384971"
+        ixy="2.58229478601455E-07"
+        ixz="-8.04994143480363E-07"
+        iyy="0.0312939821707009"
+        iyz="-1.48918689712807E-05"
+        izz="0.0313058391969932" />
     </inertial>
     <visual>
       <origin
@@ -144,62 +119,12 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-        filename="package://rogue/description/meshes/Driving_Front_Left_Link.stl"/>
-      </geometry>
-    </visual>
-    <collision>
-      <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
-      <geometry>
-        <mesh
-          filename="package://rogue/description/meshes/Driving_Front_Left_Link.stl" />
-      </geometry>
-    </collision>
-  </link>
-  <!-- joint chassis ST right -->
-  <joint name="Steering_Front_Right" type="continuous">
-    <parent link="chassis_link"/>
-    <child link="Steering_Front_Right_Link"/>
-    <origin
-      xyz="0.5625 -0.306 0"
-      rpy="1.5708 0 -1.5736" />
-    <axis
-      xyz="0 1 0" />
-    <limit
-      lower="-3.14"
-      upper="3.14"
-      effort="0"
-      velocity="4.05" />
-  </joint>
-  <!-- link ST front_right -->
-  <link
-    name="Steering_Front_Right_Link">
-    <inertial>
-      <origin
-        xyz="0.0265509625988167 -0.0902801904129674 0.00150839438421835"
-        rpy="0 0 0" />
-      <mass
-        value="0.291764052989947" />
-      <inertia
-        ixx="0.000897400695611324"
-        ixy="-0.00018186487322157"
-        ixz="-4.04719313252156E-05"
-        iyy="0.000964137142000604"
-        iyz="-1.03319776988643E-05"
-        izz="0.00160749385918111" />
-    </inertial>
-    <visual>
-      <origin
-        xyz="0 0 0"
-        rpy="0 0 0" />
-      <geometry>
-        <mesh
-          filename="package://rogue/description/meshes/Steering_Front_Right_Link.stl" />
+          filename="package://rogue/meshes/Driving_Front_Left_Link.STL" />
       </geometry>
       <material
         name="">
-        <color rgba="0.44313725490196076 0.6235294117647059 0.5686274509803921 1.0" />
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
       </material>
     </visual>
     <collision>
@@ -208,41 +133,91 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://rogue/description/meshes/Steering_Front_Right_Link.stl" />
+          filename="package://rogue/meshes/Driving_Front_Left_Link.STL" />
       </geometry>
     </collision>
   </link>
-  <!-- joint ST front right DR right -->
-  <joint name="Driving_Front_Right" type="continuous">
-    <parent link="Steering_Front_Right_Link"/>
-    <child link="Driving_Front_Right_Link"/>
+  <joint
+    name="Driving_Front_Left"
+    type="continuous">
     <origin
-      xyz="0 -0.1145 0"
-      rpy="1.5327 -0.054583 0.059592" />
+      xyz="0 0.105281491318534 0"
+      rpy="1.25585118201626 0 3.14159265358979" />
+    <parent
+      link="Steering_Front_Left_Link" />
+    <child
+      link="Driving_Front_Left_Link" />
     <axis
-      xyz="0.99823 0 0.059504" />
-    <limit
-      lower="-100"
-      upper="100"
-      effort="0"
-      velocity="4.05" />
+      xyz="0 0.309764314615681 -0.95081337253463" />
   </joint>
-  <!-- link DR front_right -->
+  <link
+    name="Steering_Front_Right_Link">
+    <inertial>
+      <origin
+        xyz="0.225253435716287 -0.0613838394109246 -0.000822688175889374"
+        rpy="0 0 0" />
+      <mass
+        value="1.85682341940371" />
+      <inertia
+        ixx="0.0307102115747056"
+        ixy="-0.00225357611286932"
+        ixz="-1.57029811788216E-14"
+        iyy="0.0217734903548105"
+        iyz="-1.9973172421528E-15"
+        izz="0.0500272192704002" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rogue/meshes/Steering_Front_Right_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.666666666666667 0.698039215686274 0.768627450980392 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rogue/meshes/Steering_Front_Right_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Steering_Front_Right"
+    type="continuous">
+    <origin
+      xyz="-0.539856087012609 0.0730000000000078 -0.194276018002367"
+      rpy="1.57827537993681 0 1.5707963267949" />
+    <parent
+      link="base_link" />
+    <child
+      link="Steering_Front_Right_Link" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
   <link
     name="Driving_Front_Right_Link">
     <inertial>
       <origin
-        xyz="-0.0182564505721275 -3.92727933196113E-06 -0.00112517178645236"
+        xyz="-0.234364435287176 0.0237233963684859 0.0746409006247968"
         rpy="0 0 0" />
       <mass
-        value="1.39036444547767" />
+        value="3.92591214810005" />
       <inertia
-        ixx="0.00504431627608894"
-        ixy="6.66802588895595E-07"
-        ixz="3.18555927896797E-05"
-        iyy="0.00451167026228944"
-        iyz="-2.22813616974866E-07"
-        izz="0.00451213600378381" />
+        ixx="0.0405276513384966"
+        ixy="-2.52326125562653E-07"
+        ixz="-8.06864028845856E-07"
+        iyy="0.0312838919770476"
+        iyz="5.62193973789246E-07"
+        izz="0.0313159293906459" />
     </inertial>
     <visual>
       <origin
@@ -250,8 +225,13 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://rogue/description/meshes/Driving_Front_Right_Link.stl" />
+          filename="package://rogue/meshes/Driving_Front_Right_Link.STL" />
       </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
     </visual>
     <collision>
       <origin
@@ -259,41 +239,38 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://rogue/description/meshes/Driving_Front_Right_Link.stl" />
+          filename="package://rogue/meshes/Driving_Front_Right_Link.STL" />
       </geometry>
     </collision>
   </link>
-  <!-- joint chassis DR_left -->
-  <joint name="Driving_Left" type="continuous">
-    <parent link="chassis_link"/>
-    <child link="Driving_Left_Link"/>
+  <joint
+    name="Driving_Front_Right"
+    type="continuous">
     <origin
-      xyz="-0.56821 0.2102 -0.1145"
-      rpy="-2.0317 -0.026508 1.4579" />
+      xyz="0 -0.10690236537747 0"
+      rpy="-1.27223789169551 0 3.14159265358979" />
+    <parent
+      link="Steering_Front_Right_Link" />
+    <child
+      link="Driving_Front_Right_Link" />
     <axis
-      xyz="0.99823 0 0.059504" />
-    <limit
-      lower="-100"
-      upper="100"
-      effort="0"
-      velocity="4.05" />
+      xyz="0 0.294142720525736 0.955761507888719" />
   </joint>
-  <!-- link DR left -->
   <link
     name="Driving_Left_Link">
     <inertial>
       <origin
-        xyz="0.077549 -3.9273E-06 0.0045857"
+        xyz="0.100135564712824 0.102080903099441 -0.0427931832764656"
         rpy="0 0 0" />
       <mass
-        value="1.3904" />
+        value="3.9259121481001" />
       <inertia
-        ixx="0.0050443"
-        ixy="6.668E-07"
-        ixz="3.1856E-05"
-        iyy="0.0045117"
-        iyz="-2.2281E-07"
-        izz="0.0045121" />
+        ixx="0.0405276513384971"
+        ixy="7.78482858174691E-07"
+        ixz="-3.29639915363223E-07"
+        iyy="0.0313155171694435"
+        iyz="-3.65412601208582E-06"
+        izz="0.0312843041982508" />
     </inertial>
     <visual>
       <origin
@@ -301,8 +278,13 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://rogue/description/meshes/Driving_Left_Link.stl" />
+          filename="package://rogue/meshes/Driving_Left_Link.STL" />
       </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
     </visual>
     <collision>
       <origin
@@ -310,41 +292,38 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://rogue/description/meshes/Driving_Left_Link.stl" />
+          filename="package://rogue/meshes/Driving_Left_Link.STL" />
       </geometry>
     </collision>
   </link>
-  <!-- joint chassis DR_right -->
-  <joint name="Driving_Right" type="continuous">
-    <parent link="chassis_link"/>
-    <child link="Driving_Right_Link"/>
+  <joint
+    name="Driving_Left"
+    type="continuous">
     <origin
-      xyz="-0.55679 -0.2102 -0.1145"
-      rpy="-2.0317 -0.026508 -1.6837" />
+      xyz="0.535731179493507 -0.407500000000434 -0.49861768424532"
+      rpy="1.96681303566779 0 1.5707963267949" />
+    <parent
+      link="base_link" />
+    <child
+      link="Driving_Left_Link" />
     <axis
-      xyz="0.99823 0 0.059504" />
-    <limit
-      lower="-100"
-      upper="100"
-      effort="0"
-      velocity="4.05" />
+      xyz="1 0 0" />
   </joint>
-  <!-- link DR right -->
   <link
     name="Driving_Right_Link">
     <inertial>
       <origin
-        xyz="0.077549 -3.9273E-06 0.0045857"
+        xyz="-0.307364435286744 -0.106845153056515 -0.0289115994171902"
         rpy="0 0 0" />
       <mass
-        value="1.3904" />
+        value="3.92591214810012" />
       <inertia
-        ixx="0.0050443"
-        ixy="6.668E-07"
-        ixz="3.1856E-05"
-        iyy="0.0045117"
-        iyz="-2.2281E-07"
-        izz="0.0045121" />
+        ixx="0.0405276513384973"
+        ixy="-8.16838012431588E-07"
+        ixz="-2.17884593916795E-07"
+        iyy="0.0313072889431169"
+        iyz="1.42294174064108E-05"
+        izz="0.0312925324245774" />
     </inertial>
     <visual>
       <origin
@@ -352,8 +331,13 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://rogue/description/meshes/Driving_Right_Link.stl" />
+          filename="package://rogue/meshes/Driving_Right_Link.STL" />
       </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
     </visual>
     <collision>
       <origin
@@ -361,8 +345,21 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://rogue/description/meshes/Driving_Right_Link.stl" />
+          filename="package://rogue/meshes/Driving_Right_Link.STL" />
       </geometry>
     </collision>
   </link>
+  <joint
+    name="Driving_Right"
+    type="continuous">
+    <origin
+      xyz="0.536022919102397 0 -0.498234906342967"
+      rpy="-1.8359994985479 0 -1.5707963267949" />
+    <parent
+      link="base_link" />
+    <child
+      link="Driving_Right_Link" />
+    <axis
+      xyz="1 0 0" />
+  </joint>
 </robot>
