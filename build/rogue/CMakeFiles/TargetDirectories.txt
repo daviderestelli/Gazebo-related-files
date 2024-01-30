@@ -1,0 +1,9 @@
+/home/davide/motor-control1/build/rogue/CMakeFiles/uninstall.dir
+/home/davide/motor-control1/build/rogue/CMakeFiles/rogue_uninstall.dir
+/home/davide/motor-control1/build/rogue/CMakeFiles/test.dir
+/home/davide/motor-control1/build/rogue/CMakeFiles/edit_cache.dir
+/home/davide/motor-control1/build/rogue/CMakeFiles/rebuild_cache.dir
+/home/davide/motor-control1/build/rogue/CMakeFiles/list_install_components.dir
+/home/davide/motor-control1/build/rogue/CMakeFiles/install.dir
+/home/davide/motor-control1/build/rogue/CMakeFiles/install/local.dir
+/home/davide/motor-control1/build/rogue/CMakeFiles/install/strip.dir

@@ -1,0 +1,4 @@
+Invoking command in '/home/davide/motor-control1/build/rogue': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/davide/motor-control1/build/rogue -- -j4 -l4
+Invoked command in '/home/davide/motor-control1/build/rogue' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/davide/motor-control1/build/rogue -- -j4 -l4
+Invoking command in '/home/davide/motor-control1/build/rogue': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/davide/motor-control1/build/rogue
+Invoked command in '/home/davide/motor-control1/build/rogue' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/davide/motor-control1/build/rogue

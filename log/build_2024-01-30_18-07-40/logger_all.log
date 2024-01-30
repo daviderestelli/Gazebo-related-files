@@ -1,0 +1,139 @@
+[4.980s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build', '--symlink-install']
+[4.980s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=True, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=4, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0x7fec244a41f0>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7fec248c7c70>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7fec248c7c70>>)
+[5.195s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[5.195s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[5.195s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[5.195s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[5.195s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[5.196s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[5.196s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/davide/motor-control1'
+[5.196s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[5.196s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[5.197s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[5.197s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[5.197s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[5.197s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[5.197s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[5.197s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[5.198s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[5.244s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[5.244s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[5.245s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[5.245s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[5.245s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[5.245s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[5.246s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[5.246s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[5.247s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[5.247s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[5.247s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[5.247s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[5.248s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[5.248s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[5.248s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[5.249s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[5.249s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[5.249s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[5.249s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[5.249s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[5.249s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[5.250s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[5.250s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[5.250s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[5.251s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[5.251s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[5.251s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[5.251s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[5.251s] Level 1:colcon.colcon_core.package_identification:_identify(src/rogue) by extensions ['ignore', 'ignore_ament_install']
+[5.252s] Level 1:colcon.colcon_core.package_identification:_identify(src/rogue) by extension 'ignore'
+[5.252s] Level 1:colcon.colcon_core.package_identification:_identify(src/rogue) by extension 'ignore_ament_install'
+[5.252s] Level 1:colcon.colcon_core.package_identification:_identify(src/rogue) by extensions ['colcon_pkg']
+[5.252s] Level 1:colcon.colcon_core.package_identification:_identify(src/rogue) by extension 'colcon_pkg'
+[5.252s] Level 1:colcon.colcon_core.package_identification:_identify(src/rogue) by extensions ['colcon_meta']
+[5.253s] Level 1:colcon.colcon_core.package_identification:_identify(src/rogue) by extension 'colcon_meta'
+[5.253s] Level 1:colcon.colcon_core.package_identification:_identify(src/rogue) by extensions ['ros']
+[5.253s] Level 1:colcon.colcon_core.package_identification:_identify(src/rogue) by extension 'ros'
+[5.266s] DEBUG:colcon.colcon_core.package_identification:Package 'src/rogue' with type 'ros.ament_cmake' and name 'rogue'
+[5.267s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[5.267s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[5.267s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[5.267s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[5.267s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[5.713s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[5.713s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[5.872s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 1 installed packages in /home/davide/motor-control1/install
+[5.951s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 335 installed packages in /opt/ros/humble
+[5.961s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[6.506s] Level 5:colcon.colcon_core.verb:set package 'rogue' build argument 'cmake_args' from command line to 'None'
+[6.506s] Level 5:colcon.colcon_core.verb:set package 'rogue' build argument 'cmake_target' from command line to 'None'
+[6.507s] Level 5:colcon.colcon_core.verb:set package 'rogue' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[6.507s] Level 5:colcon.colcon_core.verb:set package 'rogue' build argument 'cmake_clean_cache' from command line to 'False'
+[6.507s] Level 5:colcon.colcon_core.verb:set package 'rogue' build argument 'cmake_clean_first' from command line to 'False'
+[6.507s] Level 5:colcon.colcon_core.verb:set package 'rogue' build argument 'cmake_force_configure' from command line to 'False'
+[6.507s] Level 5:colcon.colcon_core.verb:set package 'rogue' build argument 'ament_cmake_args' from command line to 'None'
+[6.507s] Level 5:colcon.colcon_core.verb:set package 'rogue' build argument 'catkin_cmake_args' from command line to 'None'
+[6.507s] Level 5:colcon.colcon_core.verb:set package 'rogue' build argument 'catkin_skip_building_tests' from command line to 'False'
+[6.507s] DEBUG:colcon.colcon_core.verb:Building package 'rogue' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/davide/motor-control1/build/rogue', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/davide/motor-control1/install/rogue', 'merge_install': False, 'path': '/home/davide/motor-control1/src/rogue', 'symlink_install': True, 'test_result_base': None}
+[6.580s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[6.657s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[6.657s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/davide/motor-control1/src/rogue' with build type 'ament_cmake'
+[6.658s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/davide/motor-control1/src/rogue'
+[6.750s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[6.751s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[6.752s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[7.037s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/davide/motor-control1/build/rogue': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/davide/motor-control1/build/rogue -- -j4 -l4
+[15.589s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/davide/motor-control1/build/rogue' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/davide/motor-control1/build/rogue -- -j4 -l4
+[15.696s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/davide/motor-control1/build/rogue': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/davide/motor-control1/build/rogue
+[15.791s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(rogue)
+[15.792s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/davide/motor-control1/build/rogue' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/davide/motor-control1/build/rogue
+[15.872s] Level 1:colcon.colcon_core.environment:checking '/home/davide/motor-control1/install/rogue' for CMake module files
+[15.875s] Level 1:colcon.colcon_core.environment:checking '/home/davide/motor-control1/install/rogue' for CMake config files
+[15.878s] Level 1:colcon.colcon_core.shell:create_environment_hook('rogue', 'cmake_prefix_path')
+[15.953s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/davide/motor-control1/install/rogue/share/rogue/hook/cmake_prefix_path.ps1'
+[15.957s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/davide/motor-control1/install/rogue/share/rogue/hook/cmake_prefix_path.dsv'
+[15.959s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/davide/motor-control1/install/rogue/share/rogue/hook/cmake_prefix_path.sh'
+[15.962s] Level 1:colcon.colcon_core.environment:checking '/home/davide/motor-control1/install/rogue/bin'
+[15.963s] Level 1:colcon.colcon_core.environment:checking '/home/davide/motor-control1/install/rogue/lib/pkgconfig/rogue.pc'
+[15.964s] Level 1:colcon.colcon_core.environment:checking '/home/davide/motor-control1/install/rogue/lib/python3.10/site-packages'
+[15.965s] Level 1:colcon.colcon_core.environment:checking '/home/davide/motor-control1/install/rogue/bin'
+[16.044s] INFO:colcon.colcon_core.shell:Creating package script '/home/davide/motor-control1/install/rogue/share/rogue/package.ps1'
+[16.048s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/davide/motor-control1/install/rogue/share/rogue/package.dsv'
+[16.050s] INFO:colcon.colcon_core.shell:Creating package script '/home/davide/motor-control1/install/rogue/share/rogue/package.sh'
+[16.054s] INFO:colcon.colcon_core.shell:Creating package script '/home/davide/motor-control1/install/rogue/share/rogue/package.bash'
+[16.058s] INFO:colcon.colcon_core.shell:Creating package script '/home/davide/motor-control1/install/rogue/share/rogue/package.zsh'
+[16.061s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/davide/motor-control1/install/rogue/share/colcon-core/packages/rogue)
+[16.214s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(rogue)
+[16.286s] Level 1:colcon.colcon_core.environment:checking '/home/davide/motor-control1/install/rogue' for CMake module files
+[16.288s] Level 1:colcon.colcon_core.environment:checking '/home/davide/motor-control1/install/rogue' for CMake config files
+[16.292s] Level 1:colcon.colcon_core.shell:create_environment_hook('rogue', 'cmake_prefix_path')
+[16.369s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/davide/motor-control1/install/rogue/share/rogue/hook/cmake_prefix_path.ps1'
+[16.371s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/davide/motor-control1/install/rogue/share/rogue/hook/cmake_prefix_path.dsv'
+[16.372s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/davide/motor-control1/install/rogue/share/rogue/hook/cmake_prefix_path.sh'
+[16.374s] Level 1:colcon.colcon_core.environment:checking '/home/davide/motor-control1/install/rogue/bin'
+[16.374s] Level 1:colcon.colcon_core.environment:checking '/home/davide/motor-control1/install/rogue/lib/pkgconfig/rogue.pc'
+[16.375s] Level 1:colcon.colcon_core.environment:checking '/home/davide/motor-control1/install/rogue/lib/python3.10/site-packages'
+[16.376s] Level 1:colcon.colcon_core.environment:checking '/home/davide/motor-control1/install/rogue/bin'
+[16.454s] INFO:colcon.colcon_core.shell:Creating package script '/home/davide/motor-control1/install/rogue/share/rogue/package.ps1'
+[16.456s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/davide/motor-control1/install/rogue/share/rogue/package.dsv'
+[16.459s] INFO:colcon.colcon_core.shell:Creating package script '/home/davide/motor-control1/install/rogue/share/rogue/package.sh'
+[16.460s] INFO:colcon.colcon_core.shell:Creating package script '/home/davide/motor-control1/install/rogue/share/rogue/package.bash'
+[16.462s] INFO:colcon.colcon_core.shell:Creating package script '/home/davide/motor-control1/install/rogue/share/rogue/package.zsh'
+[16.463s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/davide/motor-control1/install/rogue/share/colcon-core/packages/rogue)
+[16.465s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[16.466s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[16.466s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[16.468s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[16.556s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[16.556s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[16.556s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[16.600s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[16.694s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/davide/motor-control1/install/local_setup.ps1'
+[16.699s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/davide/motor-control1/install/_local_setup_util_ps1.py'
+[16.707s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/davide/motor-control1/install/setup.ps1'
+[16.783s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/davide/motor-control1/install/local_setup.sh'
+[16.786s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/davide/motor-control1/install/_local_setup_util_sh.py'
+[16.788s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/davide/motor-control1/install/setup.sh'
+[16.866s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/davide/motor-control1/install/local_setup.bash'
+[16.868s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/davide/motor-control1/install/setup.bash'
+[16.947s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/davide/motor-control1/install/local_setup.zsh'
+[16.949s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/davide/motor-control1/install/setup.zsh'

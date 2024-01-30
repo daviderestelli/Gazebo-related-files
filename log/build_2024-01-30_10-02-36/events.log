@@ -1,0 +1,186 @@
+[0.000000] (-) TimerEvent: {}
+[0.000140] (rogue) JobQueued: {'identifier': 'rogue', 'dependencies': OrderedDict()}
+[0.001403] (rogue) JobStarted: {'identifier': 'rogue'}
+[0.102543] (-) TimerEvent: {}
+[0.115742] (rogue) JobProgress: {'identifier': 'rogue', 'progress': 'cmake'}
+[0.116154] (rogue) Command: {'cmd': ['/usr/bin/cmake', '/home/davide/motor-control1/src/rogue', '-DAMENT_CMAKE_SYMLINK_INSTALL=1', '-DCMAKE_INSTALL_PREFIX=/home/davide/motor-control1/install/rogue'], 'cwd': '/home/davide/motor-control1/build/rogue', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'davide'), ('LC_TIME', 'de_DE.UTF-8'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/davide'), ('OLDPWD', '/home/davide/motor-control1/motor-control1'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'de_DE.UTF-8'), ('SYSTEMD_EXEC_PID', '2887'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'davide'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'davide'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/home/davide/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/davide-VirtualBox:@/tmp/.ICE-unix/2103,unix/davide-VirtualBox:/tmp/.ICE-unix/2103'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'de_DE.UTF-8'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/663aa1c1_76e1_4171_b949_41d2b10ef532'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'de_DE.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.H56DI2'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.105'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'de_DE.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'de_DE.UTF-8'), ('LC_IDENTIFICATION', 'de_DE.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/davide/motor-control1/build/rogue'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'de_DE.UTF-8'), ('LC_PAPER', 'de_DE.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[0.202859] (-) TimerEvent: {}
+[0.303680] (-) TimerEvent: {}
+[0.383261] (rogue) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[0.404026] (-) TimerEvent: {}
+[0.505228] (-) TimerEvent: {}
+[0.607289] (-) TimerEvent: {}
+[0.709750] (-) TimerEvent: {}
+[0.750854] (rogue) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[0.778236] (rogue) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.813174] (-) TimerEvent: {}
+[0.913678] (-) TimerEvent: {}
+[0.952140] (rogue) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[0.989459] (rogue) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[0.992405] (rogue) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[0.994395] (rogue) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[1.004366] (rogue) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[1.014798] (-) TimerEvent: {}
+[1.115297] (-) TimerEvent: {}
+[1.216372] (-) TimerEvent: {}
+[1.244388] (rogue) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[1.270467] (rogue) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[1.271018] (rogue) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[1.272070] (rogue) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[1.306388] (rogue) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.6 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[1.316660] (-) TimerEvent: {}
+[1.416994] (-) TimerEvent: {}
+[1.517501] (-) TimerEvent: {}
+[1.606701] (rogue) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3.10 (found version "3.10.12") found components: Interpreter \n'}
+[1.617756] (-) TimerEvent: {}
+[1.719341] (-) TimerEvent: {}
+[1.730699] (rogue) StdoutLine: {'line': b'-- Override CMake install command with custom implementation using symlinks instead of copying resources\n'}
+[1.813138] (rogue) StdoutLine: {'line': b'-- Found controller_interface: 2.36.0 (/opt/ros/humble/share/controller_interface/cmake)\n'}
+[1.820003] (-) TimerEvent: {}
+[1.921544] (-) TimerEvent: {}
+[1.982755] (rogue) StdoutLine: {'line': b'-- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)\n'}
+[2.004203] (rogue) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[2.022603] (-) TimerEvent: {}
+[2.049168] (rogue) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)\n'}
+[2.123209] (-) TimerEvent: {}
+[2.147118] (rogue) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[2.226740] (-) TimerEvent: {}
+[2.240083] (rogue) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[2.327180] (-) TimerEvent: {}
+[2.429110] (-) TimerEvent: {}
+[2.529998] (-) TimerEvent: {}
+[2.630501] (-) TimerEvent: {}
+[2.732725] (-) TimerEvent: {}
+[2.834167] (-) TimerEvent: {}
+[2.936583] (-) TimerEvent: {}
+[3.037587] (-) TimerEvent: {}
+[3.137938] (-) TimerEvent: {}
+[3.238917] (-) TimerEvent: {}
+[3.340223] (-) TimerEvent: {}
+[3.445375] (-) TimerEvent: {}
+[3.545808] (-) TimerEvent: {}
+[3.648317] (-) TimerEvent: {}
+[3.750855] (-) TimerEvent: {}
+[3.852354] (-) TimerEvent: {}
+[3.953345] (-) TimerEvent: {}
+[4.053738] (-) TimerEvent: {}
+[4.141468] (rogue) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 6.1.1 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)\n'}
+[4.149161] (rogue) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 6.2.5 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)\n'}
+[4.153909] (-) TimerEvent: {}
+[4.254788] (-) TimerEvent: {}
+[4.260083] (rogue) StdoutLine: {'line': b'-- Found TinyXML2 via Config file: TinyXML2_DIR-NOTFOUND\n'}
+[4.339995] (rogue) StdoutLine: {'line': b'-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  \n'}
+[4.346851] (rogue) StdoutLine: {'line': b'-- Found TinyXML2 via Config file: TinyXML2_DIR-NOTFOUND\n'}
+[4.357460] (-) TimerEvent: {}
+[4.373819] (rogue) StdoutLine: {'line': b'-- Found FastRTPS: /opt/ros/humble/include  \n'}
+[4.397266] (rogue) StdoutLine: {'line': b'-- Found TinyXML2 via Config file: TinyXML2_DIR-NOTFOUND\n'}
+[4.411257] (rogue) StdoutLine: {'line': b'-- Found TinyXML2 via Config file: TinyXML2_DIR-NOTFOUND\n'}
+[4.430112] (rogue) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[4.456486] (rogue) StdoutLine: {'line': b'-- Looking for pthread.h\n'}
+[4.458964] (-) TimerEvent: {}
+[4.559310] (-) TimerEvent: {}
+[4.628883] (rogue) StdoutLine: {'line': b'-- Looking for pthread.h - found\n'}
+[4.629410] (rogue) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD\n'}
+[4.659682] (-) TimerEvent: {}
+[4.740926] (rogue) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success\n'}
+[4.742787] (rogue) StdoutLine: {'line': b'-- Found Threads: TRUE  \n'}
+[4.760889] (-) TimerEvent: {}
+[4.861235] (-) TimerEvent: {}
+[4.967832] (-) TimerEvent: {}
+[5.068439] (-) TimerEvent: {}
+[5.179366] (-) TimerEvent: {}
+[5.282331] (-) TimerEvent: {}
+[5.382898] (-) TimerEvent: {}
+[5.392414] (rogue) StdoutLine: {'line': b'-- Found nav_msgs: 4.2.3 (/opt/ros/humble/share/nav_msgs/cmake)\n'}
+[5.484733] (-) TimerEvent: {}
+[5.585268] (-) TimerEvent: {}
+[5.607694] (rogue) StdoutLine: {'line': b'-- Found realtime_tools: 2.5.0 (/opt/ros/humble/share/realtime_tools/cmake)\n'}
+[5.685622] (-) TimerEvent: {}
+[5.720837] (rogue) StdoutLine: {'line': b'-- Found tf2: 0.25.5 (/opt/ros/humble/share/tf2/cmake)\n'}
+[5.750673] (rogue) StdoutLine: {'line': b'-- Found tf2_msgs: 0.25.5 (/opt/ros/humble/share/tf2_msgs/cmake)\n'}
+[5.785793] (-) TimerEvent: {}
+[5.891875] (-) TimerEvent: {}
+[5.992830] (-) TimerEvent: {}
+[6.053463] (rogue) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.12.9 (/opt/ros/humble/share/ament_lint_auto/cmake)\n'}
+[6.093883] (-) TimerEvent: {}
+[6.194703] (-) TimerEvent: {}
+[6.205739] (rogue) StdoutLine: {'line': b"-- Added test 'copyright' to check source files copyright and LICENSE\n"}
+[6.209148] (rogue) StdoutLine: {'line': b"-- Added test 'cppcheck' to perform static code analysis on C / C++ code\n"}
+[6.209411] (rogue) StdoutLine: {'line': b'-- Configured cppcheck include dirs: \n'}
+[6.209534] (rogue) StdoutLine: {'line': b'-- Configured cppcheck exclude dirs and/or files: \n'}
+[6.212398] (rogue) StdoutLine: {'line': b"-- Added test 'cpplint' to check C / C++ code against the Google style\n"}
+[6.212535] (rogue) StdoutLine: {'line': b'-- Configured cpplint exclude dirs and/or files: \n'}
+[6.213517] (rogue) StdoutLine: {'line': b"-- Added test 'flake8' to check Python code syntax and style conventions\n"}
+[6.215079] (rogue) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[6.216278] (rogue) StdoutLine: {'line': b"-- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257\n"}
+[6.219759] (rogue) StdoutLine: {'line': b"-- Added test 'uncrustify' to check C / C++ code style\n"}
+[6.219882] (rogue) StdoutLine: {'line': b'-- Configured uncrustify additional arguments: \n'}
+[6.221164] (rogue) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[6.226317] (rogue) StdoutLine: {'line': b'-- Configuring done\n'}
+[6.234031] (rogue) StdoutLine: {'line': b'-- Generating done\n'}
+[6.239879] (rogue) StdoutLine: {'line': b'-- Build files have been written to: /home/davide/motor-control1/build/rogue\n'}
+[6.255399] (rogue) CommandEnded: {'returncode': 0}
+[6.256107] (rogue) JobProgress: {'identifier': 'rogue', 'progress': 'build'}
+[6.258551] (rogue) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/davide/motor-control1/build/rogue', '--', '-j4', '-l4'], 'cwd': '/home/davide/motor-control1/build/rogue', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'davide'), ('LC_TIME', 'de_DE.UTF-8'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/davide'), ('OLDPWD', '/home/davide/motor-control1/motor-control1'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'de_DE.UTF-8'), ('SYSTEMD_EXEC_PID', '2887'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'davide'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'davide'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/home/davide/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/davide-VirtualBox:@/tmp/.ICE-unix/2103,unix/davide-VirtualBox:/tmp/.ICE-unix/2103'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'de_DE.UTF-8'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/663aa1c1_76e1_4171_b949_41d2b10ef532'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'de_DE.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.H56DI2'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.105'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'de_DE.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'de_DE.UTF-8'), ('LC_IDENTIFICATION', 'de_DE.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/davide/motor-control1/build/rogue'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'de_DE.UTF-8'), ('LC_PAPER', 'de_DE.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[6.295070] (-) TimerEvent: {}
+[6.314946] (rogue) CommandEnded: {'returncode': 0}
+[6.347099] (rogue) JobProgress: {'identifier': 'rogue', 'progress': 'install'}
+[6.358697] (rogue) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/davide/motor-control1/build/rogue'], 'cwd': '/home/davide/motor-control1/build/rogue', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'davide'), ('LC_TIME', 'de_DE.UTF-8'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/davide'), ('OLDPWD', '/home/davide/motor-control1/motor-control1'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'de_DE.UTF-8'), ('SYSTEMD_EXEC_PID', '2887'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'davide'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'davide'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/home/davide/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/davide-VirtualBox:@/tmp/.ICE-unix/2103,unix/davide-VirtualBox:/tmp/.ICE-unix/2103'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'de_DE.UTF-8'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/663aa1c1_76e1_4171_b949_41d2b10ef532'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'de_DE.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.H56DI2'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.105'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'de_DE.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'de_DE.UTF-8'), ('LC_IDENTIFICATION', 'de_DE.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/davide/motor-control1/build/rogue'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'de_DE.UTF-8'), ('LC_PAPER', 'de_DE.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[6.367866] (rogue) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[6.368620] (rogue) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[6.369433] (rogue) StdoutLine: {'line': b'-- Symlinking: /home/davide/motor-control1/install/rogue/share/rogue/bringup/config/rogue_controllers.yaml\n'}
+[6.380411] (rogue) StdoutLine: {'line': b'-- Symlinking: /home/davide/motor-control1/install/rogue/share/rogue/bringup/launch/rogue.launch.py\n'}
+[6.391519] (rogue) StdoutLine: {'line': b'-- Symlinking: /home/davide/motor-control1/install/rogue/share/rogue/bringup/launch/rsp.launch.py\n'}
+[6.395172] (-) TimerEvent: {}
+[6.403854] (rogue) StdoutLine: {'line': b'-- Symlinking: /home/davide/motor-control1/install/rogue/share/rogue/description/.gitkeep\n'}
+[6.415254] (rogue) StdoutLine: {'line': b'-- Symlinking: /home/davide/motor-control1/install/rogue/share/rogue/description/meshes/Driving_Front_Left_Link.stl\n'}
+[6.427553] (rogue) StdoutLine: {'line': b'-- Symlinking: /home/davide/motor-control1/install/rogue/share/rogue/description/meshes/Driving_Front_Right_Link.stl\n'}
+[6.439931] (rogue) StdoutLine: {'line': b'-- Symlinking: /home/davide/motor-control1/install/rogue/share/rogue/description/meshes/Driving_Left_Link.stl\n'}
+[6.450306] (rogue) StdoutLine: {'line': b'-- Symlinking: /home/davide/motor-control1/install/rogue/share/rogue/description/meshes/Driving_Right_Link.stl\n'}
+[6.461864] (rogue) StdoutLine: {'line': b'-- Symlinking: /home/davide/motor-control1/install/rogue/share/rogue/description/meshes/Steering_Front_Left_Link.stl\n'}
+[6.472791] (rogue) StdoutLine: {'line': b'-- Symlinking: /home/davide/motor-control1/install/rogue/share/rogue/description/meshes/Steering_Front_Right_Link.stl\n'}
+[6.484018] (rogue) StdoutLine: {'line': b'-- Symlinking: /home/davide/motor-control1/install/rogue/share/rogue/description/meshes/base_link.stl\n'}
+[6.494944] (rogue) StdoutLine: {'line': b'-- Symlinking: /home/davide/motor-control1/install/rogue/share/rogue/description/meshes/mm/Driving.stl\n'}
+[6.495260] (-) TimerEvent: {}
+[6.505985] (rogue) StdoutLine: {'line': b'-- Symlinking: /home/davide/motor-control1/install/rogue/share/rogue/description/meshes/mm/Steering.stl\n'}
+[6.516661] (rogue) StdoutLine: {'line': b'-- Symlinking: /home/davide/motor-control1/install/rogue/share/rogue/description/meshes/mm/rover.stl\n'}
+[6.527887] (rogue) StdoutLine: {'line': b'-- Symlinking: /home/davide/motor-control1/install/rogue/share/rogue/description/ros2_control/ackermann.xacro\n'}
+[6.541989] (rogue) StdoutLine: {'line': b'-- Symlinking: /home/davide/motor-control1/install/rogue/share/rogue/description/rviz/rogue_config.rviz\n'}
+[6.553652] (rogue) StdoutLine: {'line': b'-- Symlinking: /home/davide/motor-control1/install/rogue/share/rogue/description/rviz/rogue_config2.rviz\n'}
+[6.565415] (rogue) StdoutLine: {'line': b'-- Symlinking: /home/davide/motor-control1/install/rogue/share/rogue/description/urdf/rogue.sdf\n'}
+[6.575735] (rogue) StdoutLine: {'line': b'-- Symlinking: /home/davide/motor-control1/install/rogue/share/rogue/description/urdf/rogue.urdf.xacro\n'}
+[6.586550] (rogue) StdoutLine: {'line': b'-- Symlinking: /home/davide/motor-control1/install/rogue/share/rogue/description/urdf/rogue_des.urdf\n'}
+[6.595389] (-) TimerEvent: {}
+[6.597431] (rogue) StdoutLine: {'line': b'-- Symlinking: /home/davide/motor-control1/install/rogue/share/rogue/description/urdf/rogue_des.xacro\n'}
+[6.608466] (rogue) StdoutLine: {'line': b'-- Symlinking: /home/davide/motor-control1/install/rogue/share/rogue/description/worlds/empty.world\n'}
+[6.619622] (rogue) StdoutLine: {'line': b'-- Symlinking: /home/davide/motor-control1/install/rogue/share/rogue/hardware/ackermann_steering_controller.cpp\n'}
+[6.633435] (rogue) StdoutLine: {'line': b'-- Symlinking: /home/davide/motor-control1/install/rogue/share/rogue/hardware/include/ackermann_steering_controller/ackermann_steering_controller.hpp\n'}
+[6.644834] (rogue) StdoutLine: {'line': b'-- Symlinking: /home/davide/motor-control1/install/rogue/share/rogue/hardware/include/ackermann_steering_controller/odometry.hpp\n'}
+[6.655795] (rogue) StdoutLine: {'line': b'-- Symlinking: /home/davide/motor-control1/install/rogue/share/rogue/hardware/include/ackermann_steering_controller/rolling_mean_accumulator.hpp\n'}
+[6.666567] (rogue) StdoutLine: {'line': b'-- Symlinking: /home/davide/motor-control1/install/rogue/share/rogue/hardware/include/ackermann_steering_controller/speed_limiter.hpp\n'}
+[6.676389] (rogue) StdoutLine: {'line': b'-- Symlinking: /home/davide/motor-control1/install/rogue/share/rogue/hardware/include/ackermann_steering_controller/visibility_control.h\n'}
+[6.687130] (rogue) StdoutLine: {'line': b'-- Symlinking: /home/davide/motor-control1/install/rogue/share/rogue/hardware/odometry.cpp\n'}
+[6.695498] (-) TimerEvent: {}
+[6.697624] (rogue) StdoutLine: {'line': b'-- Symlinking: /home/davide/motor-control1/install/rogue/share/rogue/hardware/speed_limiter.cpp\n'}
+[6.708076] (rogue) StdoutLine: {'line': b'-- Symlinking: /home/davide/motor-control1/install/rogue/share/ament_index/resource_index/package_run_dependencies/rogue\n'}
+[6.718612] (rogue) StdoutLine: {'line': b'-- Symlinking: /home/davide/motor-control1/install/rogue/share/ament_index/resource_index/parent_prefix_path/rogue\n'}
+[6.731500] (rogue) StdoutLine: {'line': b'-- Symlinking: /home/davide/motor-control1/install/rogue/share/rogue/environment/ament_prefix_path.sh\n'}
+[6.743085] (rogue) StdoutLine: {'line': b'-- Symlinking: /home/davide/motor-control1/install/rogue/share/rogue/environment/ament_prefix_path.dsv\n'}
+[6.754952] (rogue) StdoutLine: {'line': b'-- Symlinking: /home/davide/motor-control1/install/rogue/share/rogue/environment/path.sh\n'}
+[6.765938] (rogue) StdoutLine: {'line': b'-- Symlinking: /home/davide/motor-control1/install/rogue/share/rogue/environment/path.dsv\n'}
+[6.776597] (rogue) StdoutLine: {'line': b'-- Symlinking: /home/davide/motor-control1/install/rogue/share/rogue/local_setup.bash\n'}
+[6.787691] (rogue) StdoutLine: {'line': b'-- Symlinking: /home/davide/motor-control1/install/rogue/share/rogue/local_setup.sh\n'}
+[6.797957] (-) TimerEvent: {}
+[6.798653] (rogue) StdoutLine: {'line': b'-- Symlinking: /home/davide/motor-control1/install/rogue/share/rogue/local_setup.zsh\n'}
+[6.809962] (rogue) StdoutLine: {'line': b'-- Symlinking: /home/davide/motor-control1/install/rogue/share/rogue/local_setup.dsv\n'}
+[6.820311] (rogue) StdoutLine: {'line': b'-- Symlinking: /home/davide/motor-control1/install/rogue/share/rogue/package.dsv\n'}
+[6.831616] (rogue) StdoutLine: {'line': b'-- Symlinking: /home/davide/motor-control1/install/rogue/share/ament_index/resource_index/packages/rogue\n'}
+[6.843292] (rogue) StdoutLine: {'line': b'-- Symlinking: /home/davide/motor-control1/install/rogue/share/rogue/cmake/rogueConfig.cmake\n'}
+[6.855207] (rogue) StdoutLine: {'line': b'-- Symlinking: /home/davide/motor-control1/install/rogue/share/rogue/cmake/rogueConfig-version.cmake\n'}
+[6.868250] (rogue) StdoutLine: {'line': b'-- Symlinking: /home/davide/motor-control1/install/rogue/share/rogue/package.xml\n'}
+[6.881452] (rogue) CommandEnded: {'returncode': 0}
+[6.899744] (-) TimerEvent: {}
+[7.000159] (-) TimerEvent: {}
+[7.102894] (-) TimerEvent: {}
+[7.139376] (rogue) JobEnded: {'identifier': 'rogue', 'rc': 0}
+[7.140233] (-) EventReactorShutdown: {}

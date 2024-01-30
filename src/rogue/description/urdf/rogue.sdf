@@ -1,0 +1,358 @@
+<sdf version='1.9'>
+  <model name='rogue'>
+    <link name='base_link'>
+      <inertial>
+        <pose>-0.00246940894159626 0.1058972543147 5.46494556407368e-17 0 0 0</pose>
+        <mass>136.62075409656401</mass>
+        <inertia>
+          <ixx>3.3220316255082989</ixx>
+          <ixy>1.612498825152817e-18</ixy>
+          <ixz>8.7403687086753598e-05</ixz>
+          <iyy>20.3007194974988</iyy>
+          <iyz>3.4410713482206558e-19</iyz>
+          <izz>18.017789067119299</izz>
+        </inertia>
+      </inertial>
+      <collision name='base_link_fixed_joint_lump__chassis_link_collision'>
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://src/rogue/meshes/base_link.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='base_link_fixed_joint_lump__chassis_link_visual'>
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://src/rogue/meshes/base_link.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <diffuse>0.990196 1 1 1</diffuse>
+          <ambient>0.990196 1 1 1</ambient>
+        </material>
+      </visual>
+    </link>
+    <joint name='Driving_Left' type='revolute'>
+      <pose relative_to='base_link'>-0.56821 0.2102 -0.1145 -2.0317 -0.02650799999999997 1.4579</pose>
+      <parent>base_link</parent>
+      <child>Driving_Left_Link</child>
+      <axis>
+        <xyz>0.99823 0 0.059504</xyz>
+        <limit>
+          <effort>0</effort>
+          <velocity>4.0499999999999998</velocity>
+          <lower>-10000000000000000</lower>
+          <upper>10000000000000000</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='Driving_Left_Link'>
+      <pose relative_to='Driving_Left'>0 0 0 0 0 0</pose>
+      <inertial>
+        <pose>0.07754900000000001 -3.9273e-06 0.0045857 0 0 0</pose>
+        <mass>1.3904000000000001</mass>
+        <inertia>
+          <ixx>0.0050442999999999998</ixx>
+          <ixy>6.6680000000000002e-07</ixy>
+          <ixz>3.1856000000000001e-05</ixz>
+          <iyy>0.0045117000000000004</iyy>
+          <iyz>-2.2280999999999999e-07</iyz>
+          <izz>0.0045120999999999998</izz>
+        </inertia>
+      </inertial>
+      <collision name='Driving_Left_Link_collision'>
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://src/rogue/meshes/Driving_Left_Link.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='Driving_Left_Link_visual'>
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://src/rogue/meshes/Driving_Left_Link.stl</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='Driving_Right' type='revolute'>
+      <pose relative_to='base_link'>-0.55679 -0.2102 -0.1145 -2.0317 -0.02650800000000015 -1.6837</pose>
+      <parent>base_link</parent>
+      <child>Driving_Right_Link</child>
+      <axis>
+        <xyz>0.99823 0 0.059504</xyz>
+        <limit>
+          <effort>0</effort>
+          <velocity>4.0499999999999998</velocity>
+          <lower>-10000000000000000</lower>
+          <upper>10000000000000000</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='Driving_Right_Link'>
+      <pose relative_to='Driving_Right'>0 0 0 0 0 0</pose>
+      <inertial>
+        <pose>0.07754900000000001 -3.9273e-06 0.0045857 0 0 0</pose>
+        <mass>1.3904000000000001</mass>
+        <inertia>
+          <ixx>0.0050442999999999998</ixx>
+          <ixy>6.6680000000000002e-07</ixy>
+          <ixz>3.1856000000000001e-05</ixz>
+          <iyy>0.0045117000000000004</iyy>
+          <iyz>-2.2280999999999999e-07</iyz>
+          <izz>0.0045120999999999998</izz>
+        </inertia>
+      </inertial>
+      <collision name='Driving_Right_Link_collision'>
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://src/rogue/meshes/Driving_Right_Link.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='Driving_Right_Link_visual'>
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://src/rogue/meshes/Driving_Right_Link.stl</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='Steering_Front_Left' type='revolute'>
+      <pose relative_to='base_link'>0.5625 0.306 0 1.5708 6.617616357922041e-17 1.568</pose>
+      <parent>base_link</parent>
+      <child>Steering_Front_Left_Link</child>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <limit>
+          <effort>0</effort>
+          <velocity>4.0499999999999998</velocity>
+          <lower>-10000000000000000</lower>
+          <upper>10000000000000000</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='Steering_Front_Left_Link'>
+      <pose relative_to='Steering_Front_Left'>0 0 0 0 0 0</pose>
+      <inertial>
+        <pose>0.0265509625988199 -0.0902801904129602 0.00150839438422112 0 0 0</pose>
+        <mass>0.29176405298994601</mass>
+        <inertia>
+          <ixx>0.00089740069561132702</ixx>
+          <ixy>-0.00018186487322156901</ixy>
+          <ixz>-4.0471931325246997e-05</ixz>
+          <iyy>0.00096413714200060301</iyy>
+          <iyz>-1.0331977698871e-05</iyz>
+          <izz>0.0016074938591811099</izz>
+        </inertia>
+      </inertial>
+      <collision name='Steering_Front_Left_Link_collision'>
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://src/rogue/meshes/Steering_Front_Left_Link.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='Steering_Front_Left_Link_visual'>
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://src/rogue/meshes/Steering_Front_Left_Link.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <diffuse>0.553922 0.779412 0.710784 1</diffuse>
+          <ambient>0.553922 0.779412 0.710784 1</ambient>
+        </material>
+      </visual>
+    </link>
+    <joint name='Driving_Front_Left' type='revolute'>
+      <pose relative_to='Steering_Front_Left_Link'>0 -0.1145 0 1.1343 -0.03163900000000001 0.054039</pose>
+      <parent>Steering_Front_Left_Link</parent>
+      <child>Driving_Front_Left_Link</child>
+      <axis>
+        <xyz>0.99823 0 0.059504</xyz>
+        <limit>
+          <effort>0</effort>
+          <velocity>4.0499999999999998</velocity>
+          <lower>-10000000000000000</lower>
+          <upper>10000000000000000</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='Driving_Front_Left_Link'>
+      <pose relative_to='Driving_Front_Left'>0 0 0 0 0 0</pose>
+      <inertial>
+        <pose>-0.0182564505721252 -3.92727932868597e-06 -0.00112517178645061 0 0 0</pose>
+        <mass>1.39036444547767</mass>
+        <inertia>
+          <ixx>0.0050443162760889599</ixx>
+          <ixy>6.6680258893282402e-07</ixy>
+          <ixz>3.1855592789663397e-05</ixz>
+          <iyy>0.0045116702622894304</iyy>
+          <iyz>-2.2281361703233399e-07</iyz>
+          <izz>0.0045121360037838404</izz>
+        </inertia>
+      </inertial>
+      <collision name='Driving_Front_Left_Link_collision'>
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://src/rogue/meshes/Driving_Front_Left_Link.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='Driving_Front_Left_Link_visual'>
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://src/rogue/meshes/Driving_Front_Left_Link.stl</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='Steering_Front_Right' type='revolute'>
+      <pose relative_to='base_link'>0.5625 -0.306 0 1.5708 2.084494723288561e-17 -1.5736</pose>
+      <parent>base_link</parent>
+      <child>Steering_Front_Right_Link</child>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <limit>
+          <effort>0</effort>
+          <velocity>4.0499999999999998</velocity>
+          <lower>-10000000000000000</lower>
+          <upper>10000000000000000</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='Steering_Front_Right_Link'>
+      <pose relative_to='Steering_Front_Right'>0 0 0 0 0 0</pose>
+      <inertial>
+        <pose>0.0265509625988167 -0.09028019041296741 0.00150839438421835 0 0 0</pose>
+        <mass>0.29176405298994701</mass>
+        <inertia>
+          <ixx>0.00089740069561132399</ixx>
+          <ixy>-0.00018186487322157001</ixy>
+          <ixz>-4.0471931325215602e-05</ixz>
+          <iyy>0.00096413714200060399</iyy>
+          <iyz>-1.03319776988643e-05</iyz>
+          <izz>0.0016074938591811099</izz>
+        </inertia>
+      </inertial>
+      <collision name='Steering_Front_Right_Link_collision'>
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://src/rogue/meshes/Steering_Front_Right_Link.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='Steering_Front_Right_Link_visual'>
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://src/rogue/meshes/Steering_Front_Right_Link.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <diffuse>0.553922 0.779412 0.710784 1</diffuse>
+          <ambient>0.553922 0.779412 0.710784 1</ambient>
+        </material>
+      </visual>
+    </link>
+    <joint name='Driving_Front_Right' type='revolute'>
+      <pose relative_to='Steering_Front_Right_Link'>0 -0.1145 0 1.5327 -0.05458300000000001 0.059592</pose>
+      <parent>Steering_Front_Right_Link</parent>
+      <child>Driving_Front_Right_Link</child>
+      <axis>
+        <xyz>0.99823 0 0.059504</xyz>
+        <limit>
+          <effort>0</effort>
+          <velocity>4.0499999999999998</velocity>
+          <lower>-10000000000000000</lower>
+          <upper>10000000000000000</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='Driving_Front_Right_Link'>
+      <pose relative_to='Driving_Front_Right'>0 0 0 0 0 0</pose>
+      <inertial>
+        <pose>-0.0182564505721275 -3.92727933196113e-06 -0.00112517178645236 0 0 0</pose>
+        <mass>1.39036444547767</mass>
+        <inertia>
+          <ixx>0.00504431627608894</ixx>
+          <ixy>6.6680258889559502e-07</ixy>
+          <ixz>3.1855592789679701e-05</ixz>
+          <iyy>0.0045116702622894399</iyy>
+          <iyz>-2.22813616974866e-07</iyz>
+          <izz>0.00451213600378381</izz>
+        </inertia>
+      </inertial>
+      <collision name='Driving_Front_Right_Link_collision'>
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://src/rogue/meshes/Driving_Front_Right_Link.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='Driving_Front_Right_Link_visual'>
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://src/rogue/meshes/Driving_Front_Right_Link.stl</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <frame name='base_joint' attached_to='base_link'>
+      <pose>0 0 0 0 -0 0</pose>
+    </frame>
+    <frame name='chassis_link' attached_to='base_joint'/>
+  </model>
+</sdf>

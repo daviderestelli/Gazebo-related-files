@@ -1,0 +1,102 @@
+-- The C compiler identification is GNU 11.4.0
+-- The CXX compiler identification is GNU 11.4.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found ament_cmake: 1.3.6 (/opt/ros/humble/share/ament_cmake/cmake)
+-- Found Python3: /usr/bin/python3.10 (found version "3.10.12") found components: Interpreter 
+-- Override CMake install command with custom implementation using symlinks instead of copying resources
+-- Found controller_interface: 2.36.0 (/opt/ros/humble/share/controller_interface/cmake)
+-- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+-- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+-- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+-- Found rmw_implementation_cmake: 6.1.1 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+-- Found rmw_fastrtps_cpp: 6.2.5 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+-- Found TinyXML2 via Config file: TinyXML2_DIR-NOTFOUND
+-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  
+-- Found TinyXML2 via Config file: TinyXML2_DIR-NOTFOUND
+-- Found FastRTPS: /opt/ros/humble/include  
+-- Found TinyXML2 via Config file: TinyXML2_DIR-NOTFOUND
+-- Found TinyXML2 via Config file: TinyXML2_DIR-NOTFOUND
+-- Using RMW implementation 'rmw_fastrtps_cpp' as default
+-- Looking for pthread.h
+-- Looking for pthread.h - found
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+-- Found Threads: TRUE  
+-- Found nav_msgs: 4.2.3 (/opt/ros/humble/share/nav_msgs/cmake)
+-- Found realtime_tools: 2.5.0 (/opt/ros/humble/share/realtime_tools/cmake)
+-- Found tf2: 0.25.5 (/opt/ros/humble/share/tf2/cmake)
+-- Found tf2_msgs: 0.25.5 (/opt/ros/humble/share/tf2_msgs/cmake)
+-- Found ament_lint_auto: 0.12.9 (/opt/ros/humble/share/ament_lint_auto/cmake)
+-- Added test 'copyright' to check source files copyright and LICENSE
+-- Added test 'cppcheck' to perform static code analysis on C / C++ code
+-- Configured cppcheck include dirs: 
+-- Configured cppcheck exclude dirs and/or files: 
+-- Added test 'cpplint' to check C / C++ code against the Google style
+-- Configured cpplint exclude dirs and/or files: 
+-- Added test 'flake8' to check Python code syntax and style conventions
+-- Added test 'lint_cmake' to check CMake code style
+-- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+-- Added test 'uncrustify' to check C / C++ code style
+-- Configured uncrustify additional arguments: 
+-- Added test 'xmllint' to check XML markup files
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/davide/motor-control1/build/rogue
+-- Install configuration: ""
+-- Execute custom install script
+-- Symlinking: /home/davide/motor-control1/install/rogue/share/rogue/bringup/config/rogue_controllers.yaml
+-- Symlinking: /home/davide/motor-control1/install/rogue/share/rogue/bringup/launch/rogue.launch.py
+-- Symlinking: /home/davide/motor-control1/install/rogue/share/rogue/bringup/launch/rsp.launch.py
+-- Symlinking: /home/davide/motor-control1/install/rogue/share/rogue/description/.gitkeep
+-- Symlinking: /home/davide/motor-control1/install/rogue/share/rogue/description/meshes/Driving_Front_Left_Link.stl
+-- Symlinking: /home/davide/motor-control1/install/rogue/share/rogue/description/meshes/Driving_Front_Right_Link.stl
+-- Symlinking: /home/davide/motor-control1/install/rogue/share/rogue/description/meshes/Driving_Left_Link.stl
+-- Symlinking: /home/davide/motor-control1/install/rogue/share/rogue/description/meshes/Driving_Right_Link.stl
+-- Symlinking: /home/davide/motor-control1/install/rogue/share/rogue/description/meshes/Steering_Front_Left_Link.stl
+-- Symlinking: /home/davide/motor-control1/install/rogue/share/rogue/description/meshes/Steering_Front_Right_Link.stl
+-- Symlinking: /home/davide/motor-control1/install/rogue/share/rogue/description/meshes/base_link.stl
+-- Symlinking: /home/davide/motor-control1/install/rogue/share/rogue/description/meshes/mm/Driving.stl
+-- Symlinking: /home/davide/motor-control1/install/rogue/share/rogue/description/meshes/mm/Steering.stl
+-- Symlinking: /home/davide/motor-control1/install/rogue/share/rogue/description/meshes/mm/rover.stl
+-- Symlinking: /home/davide/motor-control1/install/rogue/share/rogue/description/ros2_control/ackermann.xacro
+-- Symlinking: /home/davide/motor-control1/install/rogue/share/rogue/description/rviz/rogue_config.rviz
+-- Symlinking: /home/davide/motor-control1/install/rogue/share/rogue/description/rviz/rogue_config2.rviz
+-- Symlinking: /home/davide/motor-control1/install/rogue/share/rogue/description/urdf/rogue.sdf
+-- Symlinking: /home/davide/motor-control1/install/rogue/share/rogue/description/urdf/rogue.urdf.xacro
+-- Symlinking: /home/davide/motor-control1/install/rogue/share/rogue/description/urdf/rogue_des.urdf
+-- Symlinking: /home/davide/motor-control1/install/rogue/share/rogue/description/urdf/rogue_des.xacro
+-- Symlinking: /home/davide/motor-control1/install/rogue/share/rogue/description/worlds/empty.world
+-- Symlinking: /home/davide/motor-control1/install/rogue/share/rogue/hardware/ackermann_steering_controller.cpp
+-- Symlinking: /home/davide/motor-control1/install/rogue/share/rogue/hardware/include/ackermann_steering_controller/ackermann_steering_controller.hpp
+-- Symlinking: /home/davide/motor-control1/install/rogue/share/rogue/hardware/include/ackermann_steering_controller/odometry.hpp
+-- Symlinking: /home/davide/motor-control1/install/rogue/share/rogue/hardware/include/ackermann_steering_controller/rolling_mean_accumulator.hpp
+-- Symlinking: /home/davide/motor-control1/install/rogue/share/rogue/hardware/include/ackermann_steering_controller/speed_limiter.hpp
+-- Symlinking: /home/davide/motor-control1/install/rogue/share/rogue/hardware/include/ackermann_steering_controller/visibility_control.h
+-- Symlinking: /home/davide/motor-control1/install/rogue/share/rogue/hardware/odometry.cpp
+-- Symlinking: /home/davide/motor-control1/install/rogue/share/rogue/hardware/speed_limiter.cpp
+-- Symlinking: /home/davide/motor-control1/install/rogue/share/ament_index/resource_index/package_run_dependencies/rogue
+-- Symlinking: /home/davide/motor-control1/install/rogue/share/ament_index/resource_index/parent_prefix_path/rogue
+-- Symlinking: /home/davide/motor-control1/install/rogue/share/rogue/environment/ament_prefix_path.sh
+-- Symlinking: /home/davide/motor-control1/install/rogue/share/rogue/environment/ament_prefix_path.dsv
+-- Symlinking: /home/davide/motor-control1/install/rogue/share/rogue/environment/path.sh
+-- Symlinking: /home/davide/motor-control1/install/rogue/share/rogue/environment/path.dsv
+-- Symlinking: /home/davide/motor-control1/install/rogue/share/rogue/local_setup.bash
+-- Symlinking: /home/davide/motor-control1/install/rogue/share/rogue/local_setup.sh
+-- Symlinking: /home/davide/motor-control1/install/rogue/share/rogue/local_setup.zsh
+-- Symlinking: /home/davide/motor-control1/install/rogue/share/rogue/local_setup.dsv
+-- Symlinking: /home/davide/motor-control1/install/rogue/share/rogue/package.dsv
+-- Symlinking: /home/davide/motor-control1/install/rogue/share/ament_index/resource_index/packages/rogue
+-- Symlinking: /home/davide/motor-control1/install/rogue/share/rogue/cmake/rogueConfig.cmake
+-- Symlinking: /home/davide/motor-control1/install/rogue/share/rogue/cmake/rogueConfig-version.cmake
+-- Symlinking: /home/davide/motor-control1/install/rogue/share/rogue/package.xml

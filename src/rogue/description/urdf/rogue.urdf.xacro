@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!-- Basic differential drive mobile base -->
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="rogue">
+  <!-- <xacro:arg name="prefix" default="" />
+  <xacro:arg name="use_mock_hardware" default="false" /> -->
+  <!-- <xacro:arg name="use_mock_hardware" default="$(arg use_mock_hardware)" /> -->
+
+
+  <xacro:include filename="$(find rogue)/description/urdf/rogue_des.xacro" />
+
+  <!-- Import Rviz colors -->
+  <!-- <xacro:include filename="$(find ros2_control_demo_description)/diffbot/urdf/diffbot.materials.xacro" /> -->
+
+  <!-- Import diffbot ros2_control description -->
+  <xacro:include filename="$(find rogue)/description/ros2_control/ackermann.xacro" />
+
+  <!-- <xacro:rogue_ros2_control prefix="$(arg prefix)" /> -->
+
+  <!-- <xacro:rogue_ros2_control
+    name="rogue" prefix="$(arg prefix)" use_mock_hardware="$(arg use_mock_hardware)"/> -->
+    <xacro:rogue_ros2_control
+    name="rogue" prefix="" use_mock_hardware="true"/>
+
+</robot>
