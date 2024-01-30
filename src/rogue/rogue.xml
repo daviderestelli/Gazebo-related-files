@@ -1,0 +1,10 @@
+<library path="rogue">
+  <class 
+  name="rogue/RogueSystemHardware" 
+  type="rogue::RogueSystemHardware" 
+  base_class_type="hardware_interface::SystemInterface">
+  <description>
+    (todo) The AckermannSteeringController tracks velocity commands. It expects 1 VelocityJointInterface and 1 PositionJointInterfece types of hardware interfaces.
+  </description>
+  </class>
+</library>

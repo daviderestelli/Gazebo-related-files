@@ -4,9 +4,9 @@ from ament_index_python.packages import get_package_share_directory
 
 from launch import LaunchDescription
 from launch.substitutions import LaunchConfiguration
-from launch.actions import DeclareLaunchArgument, RegisterEventHandler
+from launch.actions import DeclareLaunchArgument, RegisterEventHandler, IncludeLaunchDescription
 from launch_ros.actions import Node
-
+from launch.launch_description_sources import PythonLaunchDescriptionSource
 import xacro
 
 
@@ -52,8 +52,6 @@ def generate_launch_description():
     # Process the URDF file
     pkg_path = os.path.join(get_package_share_directory('rogue'))
     rviz_path = os.path.join(pkg_path, 'description/rviz/rogue_config.rviz')
-    urdf_file = os.path.join(pkg_path, 'description/urdf', 'rogue_des.urdf')
-    xacro_file = os.path.join(pkg_path, 'description/urdf', 'rogue_des.xacro')
     xacro_file = os.path.join(pkg_path, 'description/urdf', 'rogue.urdf.xacro')
     robot_description_config = xacro.process_file(xacro_file)
 
@@ -75,6 +73,17 @@ def generate_launch_description():
     #print(robot_description)
     #pdb.set_trace()
 
+    # Include the Gazebo launch file, provided by the gazebo_ros package
+    gazebo = IncludeLaunchDescription(
+        PythonLaunchDescriptionSource([os.path.join(
+            get_package_share_directory('gazebo_ros'), 'launch'), '/gazebo.launch.py']),
+        )
+
+    # Run the spawner node from the gazebo_ros package. The entity name doesn't really matter if you only have a single robot.
+    spawn_entity = Node(package='gazebo_ros', executable='spawn_entity.py',
+                        arguments=['-topic', 'robot_description',
+                                   '-entity', 'rogue', '-x', '0.0', '-y', '0.0', '-z', '1.0'], #add the spawn position to fix the problem
+                        output='screen')
 
 
     # Create a robot_state_publisher node
@@ -146,8 +155,8 @@ def generate_launch_description():
         control_node,
         node_robot_state_publisher,
         node_joint_state_publisher,
-        rviz_node,
-        delay_rviz_after_joint_state_broadcaster_spawner,
+        # rviz_node,
+        # delay_rviz_after_joint_state_broadcaster_spawner,
         delay_robot_controller_spawner_after_joint_state_broadcaster_spawner
     ]
 
