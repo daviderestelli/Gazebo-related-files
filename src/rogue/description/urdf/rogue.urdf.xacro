@@ -13,7 +13,7 @@
 
   <!-- Import diffbot ros2_control description -->
   <xacro:include filename="$(find rogue)/description/ros2_control/ackermann.xacro" />
-
+  <xacro:include filename="$(find rogue)/description/ros2_control/gazebo_control.xacro">
   <!-- <xacro:rogue_ros2_control prefix="$(arg prefix)" /> -->
 
   <!-- <xacro:rogue_ros2_control

@@ -158,8 +158,8 @@ def generate_launch_description():
         node_joint_state_publisher,
         gazebo,
         spawn_entity,
-        # rviz_node,
-        # delay_rviz_after_joint_state_broadcaster_spawner,
+        rviz_node,
+        delay_rviz_after_joint_state_broadcaster_spawner,
         delay_robot_controller_spawner_after_joint_state_broadcaster_spawner
     ]
 

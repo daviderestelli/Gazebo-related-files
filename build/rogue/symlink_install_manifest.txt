@@ -1,3 +1,4 @@
+/home/davide/motor-control1/install/rogue/share/rogue/bringup/config/gazebo_controllers.yaml
 /home/davide/motor-control1/install/rogue/share/rogue/bringup/config/rogue_controllers.yaml
 /home/davide/motor-control1/install/rogue/share/rogue/bringup/launch/rogue.launch.py
 /home/davide/motor-control1/install/rogue/share/rogue/bringup/launch/rsp.launch.py
@@ -13,6 +14,7 @@
 /home/davide/motor-control1/install/rogue/share/rogue/description/meshes/mm/Steering.stl
 /home/davide/motor-control1/install/rogue/share/rogue/description/meshes/mm/rover.stl
 /home/davide/motor-control1/install/rogue/share/rogue/description/ros2_control/ackermann.xacro
+/home/davide/motor-control1/install/rogue/share/rogue/description/ros2_control/gazebo_control.xacro
 /home/davide/motor-control1/install/rogue/share/rogue/description/rviz/rogue_config.rviz
 /home/davide/motor-control1/install/rogue/share/rogue/description/rviz/rogue_config2.rviz
 /home/davide/motor-control1/install/rogue/share/rogue/description/urdf/rogue.sdf

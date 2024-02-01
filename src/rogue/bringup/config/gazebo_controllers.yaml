@@ -1,0 +1,45 @@
+controller_manager:
+  ros__parameters:
+    update_rate: 50
+
+    joint_state_broadcaster:
+      type: joint_state_broadcaster/JointStateBroadcaster
+
+    ackermann_steering_controller:
+      type: ackermann_steering_controller/AckermannSteeringController
+
+
+ackermann_steering_controller:
+  ros__parameters:
+
+
+    rear_wheel: 'Driving_Left'
+    front_wheel: 'Steering_Front_Left'
+    cmd_vel_timeout: 0.5 #default
+
+    wheel_separation_h: 0.612
+    wheel_radius : 0.085
+    odom_frame_id: odom
+    base_frame_id: base_link
+# Velocity and acceleration limits
+  # Whenever a min_* is unspecified, default to -max_*
+    '''linear:
+      x:
+        has_velocity_limits    : true
+        max_velocity           : 1.0  # m/s
+        min_velocity           : -0.5 # m/s
+        has_acceleration_limits: true
+        max_acceleration       : 0.8  # m/s^2
+        min_acceleration       : -0.4 # m/s^2
+        has_jerk_limits        : true
+        max_jerk               : 5.0 # m/s^3
+
+    angular:
+      z:
+        has_velocity_limits    : true
+        max_velocity           : 1.7  # rad/s
+        has_acceleration_limits: true
+        max_acceleration       : 1.5  # rad/s^2
+        has_jerk_limits        : true
+        max_jerk               : 2.5 # rad/s^3
+    '''
