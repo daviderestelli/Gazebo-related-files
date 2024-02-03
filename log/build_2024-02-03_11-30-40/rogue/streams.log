@@ -1,0 +1,108 @@
+[0.375s] Invoking command in '/home/davide/motor-control/build/rogue': CMAKE_PREFIX_PATH=/home/davide/motor-control/install/motor_control:/opt/ros/humble /usr/bin/cmake /home/davide/motor-control/src/rogue -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/davide/motor-control/install/rogue
+[0.773s] -- The C compiler identification is GNU 11.4.0
+[1.118s] -- The CXX compiler identification is GNU 11.4.0
+[1.170s] -- Detecting C compiler ABI info
+[1.446s] -- Detecting C compiler ABI info - done
+[1.506s] -- Check for working C compiler: /usr/bin/cc - skipped
+[1.508s] -- Detecting C compile features
+[1.510s] -- Detecting C compile features - done
+[1.532s] -- Detecting CXX compiler ABI info
+[1.862s] -- Detecting CXX compiler ABI info - done
+[1.916s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[1.918s] -- Detecting CXX compile features
+[1.920s] -- Detecting CXX compile features - done
+[1.947s] -- Found ament_cmake: 1.3.6 (/opt/ros/humble/share/ament_cmake/cmake)
+[2.663s] -- Found Python3: /usr/bin/python3.10 (found version "3.10.12") found components: Interpreter 
+[2.953s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[3.107s] -- Found controller_interface: 2.36.0 (/opt/ros/humble/share/controller_interface/cmake)
+[3.364s] -- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[3.389s] -- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[3.440s] -- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[3.538s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[3.664s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[8.070s] -- Found rmw_implementation_cmake: 6.1.1 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[8.085s] -- Found rmw_fastrtps_cpp: 6.2.5 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[8.354s] -- Found TinyXML2 via Config file: TinyXML2_DIR-NOTFOUND
+[8.568s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  
+[8.585s] -- Found TinyXML2 via Config file: TinyXML2_DIR-NOTFOUND
+[8.656s] -- Found FastRTPS: /opt/ros/humble/include  
+[8.717s] -- Found TinyXML2 via Config file: TinyXML2_DIR-NOTFOUND
+[8.759s] -- Found TinyXML2 via Config file: TinyXML2_DIR-NOTFOUND
+[8.806s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[8.877s] -- Looking for pthread.h
+[9.230s] -- Looking for pthread.h - found
+[9.233s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[9.564s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[9.570s] -- Found Threads: TRUE  
+[11.344s] -- Found nav_msgs: 4.2.3 (/opt/ros/humble/share/nav_msgs/cmake)
+[11.862s] -- Found realtime_tools: 2.5.0 (/opt/ros/humble/share/realtime_tools/cmake)
+[12.119s] -- Found tf2: 0.25.5 (/opt/ros/humble/share/tf2/cmake)
+[12.175s] -- Found tf2_msgs: 0.25.5 (/opt/ros/humble/share/tf2_msgs/cmake)
+[12.932s] -- Found ament_lint_auto: 0.12.9 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[13.315s] -- Added test 'copyright' to check source files copyright and LICENSE
+[13.329s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[13.330s] -- Configured cppcheck include dirs: 
+[13.330s] -- Configured cppcheck exclude dirs and/or files: 
+[13.338s] -- Added test 'cpplint' to check C / C++ code against the Google style
+[13.339s] -- Configured cpplint exclude dirs and/or files: 
+[13.342s] -- Added test 'flake8' to check Python code syntax and style conventions
+[13.346s] -- Added test 'lint_cmake' to check CMake code style
+[13.350s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[13.363s] -- Added test 'uncrustify' to check C / C++ code style
+[13.363s] -- Configured uncrustify additional arguments: 
+[13.367s] -- Added test 'xmllint' to check XML markup files
+[13.374s] -- Configuring done
+[13.395s] -- Generating done
+[13.404s] -- Build files have been written to: /home/davide/motor-control/build/rogue
+[13.442s] Invoked command in '/home/davide/motor-control/build/rogue' returned '0': CMAKE_PREFIX_PATH=/home/davide/motor-control/install/motor_control:/opt/ros/humble /usr/bin/cmake /home/davide/motor-control/src/rogue -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/davide/motor-control/install/rogue
+[13.448s] Invoking command in '/home/davide/motor-control/build/rogue': CMAKE_PREFIX_PATH=/home/davide/motor-control/install/motor_control:/opt/ros/humble /usr/bin/cmake --build /home/davide/motor-control/build/rogue -- -j4 -l4
+[13.604s] Invoked command in '/home/davide/motor-control/build/rogue' returned '0': CMAKE_PREFIX_PATH=/home/davide/motor-control/install/motor_control:/opt/ros/humble /usr/bin/cmake --build /home/davide/motor-control/build/rogue -- -j4 -l4
+[13.717s] Invoking command in '/home/davide/motor-control/build/rogue': CMAKE_PREFIX_PATH=/home/davide/motor-control/install/motor_control:/opt/ros/humble /usr/bin/cmake --install /home/davide/motor-control/build/rogue
+[13.745s] -- Install configuration: ""
+[13.747s] -- Execute custom install script
+[13.750s] -- Symlinking: /home/davide/motor-control/install/rogue/share/rogue/bringup/config/rogue_controllers.yaml
+[13.779s] -- Symlinking: /home/davide/motor-control/install/rogue/share/rogue/bringup/launch/rogue.launch.py
+[13.810s] -- Symlinking: /home/davide/motor-control/install/rogue/share/rogue/bringup/launch/rsp.launch.py
+[13.845s] -- Symlinking: /home/davide/motor-control/install/rogue/share/rogue/description/.gitkeep
+[13.876s] -- Symlinking: /home/davide/motor-control/install/rogue/share/rogue/description/meshes/Driving_Front_Left_Link.stl
+[13.905s] -- Symlinking: /home/davide/motor-control/install/rogue/share/rogue/description/meshes/Driving_Front_Right_Link.stl
+[13.939s] -- Symlinking: /home/davide/motor-control/install/rogue/share/rogue/description/meshes/Driving_Left_Link.stl
+[13.972s] -- Symlinking: /home/davide/motor-control/install/rogue/share/rogue/description/meshes/Driving_Right_Link.stl
+[14.002s] -- Symlinking: /home/davide/motor-control/install/rogue/share/rogue/description/meshes/Steering_Front_Left_Link.stl
+[14.033s] -- Symlinking: /home/davide/motor-control/install/rogue/share/rogue/description/meshes/Steering_Front_Right_Link.stl
+[14.064s] -- Symlinking: /home/davide/motor-control/install/rogue/share/rogue/description/meshes/base_link.stl
+[14.092s] -- Symlinking: /home/davide/motor-control/install/rogue/share/rogue/description/meshes/mm/Driving.stl
+[14.120s] -- Symlinking: /home/davide/motor-control/install/rogue/share/rogue/description/meshes/mm/Steering.stl
+[14.158s] -- Symlinking: /home/davide/motor-control/install/rogue/share/rogue/description/meshes/mm/rover.stl
+[14.190s] -- Symlinking: /home/davide/motor-control/install/rogue/share/rogue/description/ros2_control/ackermann.xacro
+[14.221s] -- Symlinking: /home/davide/motor-control/install/rogue/share/rogue/description/rviz/rogue_config.rviz
+[14.256s] -- Symlinking: /home/davide/motor-control/install/rogue/share/rogue/description/rviz/rogue_config2.rviz
+[14.288s] -- Symlinking: /home/davide/motor-control/install/rogue/share/rogue/description/urdf/rogue.sdf
+[14.320s] -- Symlinking: /home/davide/motor-control/install/rogue/share/rogue/description/urdf/rogue.urdf.xacro
+[14.349s] -- Symlinking: /home/davide/motor-control/install/rogue/share/rogue/description/urdf/rogue_des.urdf
+[14.378s] -- Symlinking: /home/davide/motor-control/install/rogue/share/rogue/description/urdf/rogue_des.xacro
+[14.409s] -- Symlinking: /home/davide/motor-control/install/rogue/share/rogue/description/worlds/empty.world
+[14.439s] -- Symlinking: /home/davide/motor-control/install/rogue/share/rogue/hardware/ackermann_steering_controller.cpp
+[14.468s] -- Symlinking: /home/davide/motor-control/install/rogue/share/rogue/hardware/include/ackermann_steering_controller/ackermann_steering_controller.hpp
+[14.497s] -- Symlinking: /home/davide/motor-control/install/rogue/share/rogue/hardware/include/ackermann_steering_controller/odometry.hpp
+[14.527s] -- Symlinking: /home/davide/motor-control/install/rogue/share/rogue/hardware/include/ackermann_steering_controller/rolling_mean_accumulator.hpp
+[14.565s] -- Symlinking: /home/davide/motor-control/install/rogue/share/rogue/hardware/include/ackermann_steering_controller/speed_limiter.hpp
+[14.596s] -- Symlinking: /home/davide/motor-control/install/rogue/share/rogue/hardware/include/ackermann_steering_controller/visibility_control.h
+[14.625s] -- Symlinking: /home/davide/motor-control/install/rogue/share/rogue/hardware/odometry.cpp
+[14.660s] -- Symlinking: /home/davide/motor-control/install/rogue/share/rogue/hardware/speed_limiter.cpp
+[14.690s] -- Symlinking: /home/davide/motor-control/install/rogue/share/ament_index/resource_index/package_run_dependencies/rogue
+[14.720s] -- Symlinking: /home/davide/motor-control/install/rogue/share/ament_index/resource_index/parent_prefix_path/rogue
+[14.748s] -- Symlinking: /home/davide/motor-control/install/rogue/share/rogue/environment/ament_prefix_path.sh
+[14.777s] -- Symlinking: /home/davide/motor-control/install/rogue/share/rogue/environment/ament_prefix_path.dsv
+[14.806s] -- Symlinking: /home/davide/motor-control/install/rogue/share/rogue/environment/path.sh
+[14.842s] -- Symlinking: /home/davide/motor-control/install/rogue/share/rogue/environment/path.dsv
+[14.871s] -- Symlinking: /home/davide/motor-control/install/rogue/share/rogue/local_setup.bash
+[14.901s] -- Symlinking: /home/davide/motor-control/install/rogue/share/rogue/local_setup.sh
+[14.929s] -- Symlinking: /home/davide/motor-control/install/rogue/share/rogue/local_setup.zsh
+[14.961s] -- Symlinking: /home/davide/motor-control/install/rogue/share/rogue/local_setup.dsv
+[14.991s] -- Symlinking: /home/davide/motor-control/install/rogue/share/rogue/package.dsv
+[15.020s] -- Symlinking: /home/davide/motor-control/install/rogue/share/ament_index/resource_index/packages/rogue
+[15.050s] -- Symlinking: /home/davide/motor-control/install/rogue/share/rogue/cmake/rogueConfig.cmake
+[15.078s] -- Symlinking: /home/davide/motor-control/install/rogue/share/rogue/cmake/rogueConfig-version.cmake
+[15.108s] -- Symlinking: /home/davide/motor-control/install/rogue/share/rogue/package.xml
+[15.149s] Invoked command in '/home/davide/motor-control/build/rogue' returned '0': CMAKE_PREFIX_PATH=/home/davide/motor-control/install/motor_control:/opt/ros/humble /usr/bin/cmake --install /home/davide/motor-control/build/rogue

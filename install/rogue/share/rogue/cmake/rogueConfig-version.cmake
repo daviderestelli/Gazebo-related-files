@@ -1,0 +1,1 @@
+/home/davide/motor-control/build/rogue/ament_cmake_core/rogueConfig-version.cmake

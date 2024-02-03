@@ -1,0 +1,4 @@
+source;share/rogue/local_setup.bash
+source;share/rogue/local_setup.dsv
+source;share/rogue/local_setup.sh
+source;share/rogue/local_setup.zsh

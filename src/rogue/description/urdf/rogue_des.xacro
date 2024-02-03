@@ -26,7 +26,7 @@
     <visual>
     <origin rpy="0 0 0" xyz="0 0.235 0.11"/>
       <geometry>
-        <mesh filename="package://rogue/description/meshes/base_link.stl"/>
+        <mesh filename="file:///$(find rogue)/description/meshes/base_link.stl"/>
       </geometry>
       <material name="">
         <color rgba="0.79216 0.81961 0.93333 1"/>
@@ -35,10 +35,16 @@
     <collision>
       <origin rpy="0 0 0" xyz="0 0.235 0.11"/>
       <geometry>
-        <mesh filename="package://rogue/description/meshes/base_link.stl"/>
+        <mesh filename="file:///$(find rogue)/description/meshes/base_link.stl"/>
       </geometry>
     </collision>
   </link>
+
+  <gazebo reference="chassis_link">
+      <material>Gazebo/Gray</material>
+  </gazebo>
+
+
   <link name="Steering_Front_Left_Link">
     <inertial>
       <origin rpy="0 0 0" xyz="-0.00974656428371329 0.171466468601951 3.33066907387547E-15"/>
@@ -48,7 +54,7 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://rogue/description/meshes/Steering_Front_Left_Link.stl"/>
+        <mesh filename="file:///$(find rogue)/description/meshes/Steering_Front_Left_Link.stl"/>
       </geometry>
       <material name="">
         <color rgba="0.666666666666667 0.698039215686274 0.768627450980392 1"/>
@@ -57,16 +63,23 @@
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://rogue/description/meshes/Steering_Front_Left_Link.stl"/>
+        <mesh filename="file:///$(find rogue)/description/meshes/Steering_Front_Left_Link.stl"/>
       </geometry>
     </collision>
   </link>
+
+  <gazebo reference="Steering_Front_Left_Link">
+      <material>Gazebo/Grey</material>
+  </gazebo>
+
   <joint name="Steering_Front_Left" type="continuous">
     <origin rpy="-1.5789896816345 0 -1.5707963267949" xyz="-0.539929731609329 -0.307999999999972 -0.0838046685206459"/>
     <parent link="base_link"/>
     <child link="Steering_Front_Left_Link"/>
     <axis xyz="0 1 0"/>
   </joint>
+
+
   <link name="Driving_Front_Left_Link">
     <inertial>
       <origin rpy="0 0 0" xyz="0.000635564712824666 -0.152689840468291 -0.00010385666276358"/>
@@ -76,7 +89,7 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0.148 0"/>
       <geometry>
-        <mesh filename="package://rogue/description/meshes/Driving_Front_Left_Link.stl"/>
+        <mesh filename="file:///$(find rogue)/description/meshes/Driving_Front_Left_Link.stl"/>
       </geometry>
       <material name="">
         <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1"/>
@@ -85,16 +98,25 @@
     <collision>
       <origin rpy="0 0 0" xyz="0 0.148 0"/>
       <geometry>
-        <mesh filename="package://rogue/description/meshes/Driving_Front_Left_Link.stl"/>
+        <mesh filename="file:///$(find rogue)/description/meshes/Driving_Front_Left_Link.stl"/>
       </geometry>
     </collision>
   </link>
+
+  <gazebo reference="Driving_Front_Left_Link">
+      <material>Gazebo/Red</material>
+  </gazebo>
+
+
   <joint name="Driving_Front_Left" type="continuous">
     <origin rpy="0 0 3.14159265358979" xyz="0 ${0.14261211817947+0.148} 0"/>
     <parent link="Steering_Front_Left_Link"/>
     <child link="Driving_Front_Left_Link"/>
     <axis xyz="1 0 0"/>
   </joint>
+
+
+
   <link name="Steering_Front_Right_Link">
     <inertial>
       <origin rpy="0 0 0" xyz="-0.00974656428371296 -0.171380762932291 -8.54871728961371E-15"/>
@@ -104,7 +126,7 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://rogue/description/meshes/Steering_Front_Right_Link.stl"/>
+        <mesh filename="file:///$(find rogue)/description/meshes/Steering_Front_Right_Link.stl"/>
       </geometry>
       <material name="">
         <color rgba="0.666666666666667 0.698039215686274 0.768627450980392 1"/>
@@ -113,16 +135,24 @@
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://rogue/description/meshes/Steering_Front_Right_Link.stl"/>
+        <mesh filename="file:///$(find rogue)/description/meshes/Steering_Front_Right_Link.stl"/>
       </geometry>
     </collision>
   </link>
+
+  <gazebo reference="Steering_Front_Right_Link">
+      <material>Gazebo/Grey</material>
+  </gazebo>
+
+
   <joint name="Steering_Front_Right" type="continuous">
     <origin rpy="1.57827537993681 0 1.5707963267949" xyz="-0.539856087012609 0.308000000000008 -0.0842760180023664"/>
     <parent link="base_link"/>
     <child link="Steering_Front_Right_Link"/>
     <axis xyz="0 1 0"/>
   </joint>
+
+
   <link name="Driving_Front_Right_Link">
     <inertial>
       <origin rpy="0 0 0" xyz="0.000635564712824388 0.152474662096144 0.000103856662758472"/>
@@ -132,7 +162,7 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 -0.148 0"/>
       <geometry>
-        <mesh filename="package://rogue/description/meshes/Driving_Front_Right_Link.stl"/>
+        <mesh filename="file:///$(find rogue)/description/meshes/Driving_Front_Right_Link.stl"/>
       </geometry>
       <material name="">
         <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1"/>
@@ -141,16 +171,25 @@
     <collision>
       <origin rpy="0 0 0" xyz="0 -0.148 0"/>
       <geometry>
-        <mesh filename="package://rogue/description/meshes/Driving_Front_Right_Link.stl"/>
+        <mesh filename="file:///$(find rogue)/description/meshes/Driving_Front_Right_Link.stl"/>
       </geometry>
     </collision>
   </link>
+
+  <gazebo reference="Driving_Front_Right_Link">
+      <material>Gazebo/Red</material>
+  </gazebo>
+
+
+
   <joint name="Driving_Front_Right" type="continuous">
     <origin rpy="0 0 3.14159265358979" xyz="0 ${-0.142741590881956-0.148} 0"/>
     <parent link="Steering_Front_Right_Link"/>
     <child link="Driving_Front_Right_Link"/>
     <axis xyz="1 0 0"/>
   </joint>
+
+
   <link name="Driving_Left_Link">
     <inertial>
       <origin rpy="0 0 0" xyz="-0.134864435287178 0.000687652998535182 -0.000103856662875601"/>
@@ -160,7 +199,7 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://rogue/description/meshes/Driving_Left_Link.stl"/>
+        <mesh filename="file:///$(find rogue)/description/meshes/Driving_Left_Link.stl"/>
       </geometry>
       <material name="">
         <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1"/>
@@ -169,16 +208,25 @@
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://rogue/description/meshes/Driving_Left_Link.stl"/>
+        <mesh filename="file:///$(find rogue)/description/meshes/Driving_Left_Link.stl"/>
       </geometry>
     </collision>
   </link>
+
+  <gazebo reference="Driving_Left_Link">
+      <material>Gazebo/Red</material>
+  </gazebo>
+
+
+
   <joint name="Driving_Left" type="continuous">
     <origin rpy="1.5707963267949 0 1.5707963267949" xyz="0.535731179493507 -0.172500000000432 -0.38861768424532"/>
     <parent link="base_link"/>
     <child link="Driving_Left_Link"/>
     <axis xyz="1 0 0"/>
   </joint>
+
+
   <link name="Driving_Right_Link">
     <inertial>
       <origin rpy="0 0 0" xyz="-0.134864435287174 -0.000687652998533683 0.00010385666287549"/>
@@ -188,7 +236,7 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://rogue/description/meshes/Driving_Right_Link.stl"/>
+        <mesh filename="file:///$(find rogue)/description/meshes/Driving_Right_Link.stl"/>
       </geometry>
       <material name="">
         <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1"/>
@@ -197,10 +245,16 @@
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://rogue/description/meshes/Driving_Right_Link.stl"/>
+        <mesh filename="file:///$(find rogue)/description/meshes/Driving_Right_Link.stl"/>
       </geometry>
     </collision>
   </link>
+
+  <gazebo reference="Driving_Right_Link">
+      <material>Gazebo/Red</material>
+  </gazebo>
+
+
   <joint name="Driving_Right" type="continuous">
     <origin rpy="-1.5707963267949 0 -1.5707963267949" xyz="0.536022919102346 0.17249999999957 -0.388234906342967"/>
     <parent link="base_link"/>
